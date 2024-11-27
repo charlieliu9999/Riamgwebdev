@@ -1,0 +1,123 @@
+/* 主题变量定义 */
+:root {
+    /* 明亮主题 */
+    --primary-color: #2563eb;
+    --primary-rgb: 37, 99, 235;
+    --secondary-color: #10b981;
+    --secondary-rgb: 16, 185, 129;
+    --accent-1: #f59e0b;
+    --accent-1-rgb: 245, 158, 11;
+    --accent-2: #8b5cf6;
+    --accent-2-rgb: 139, 92, 246;
+    --accent-3: #ec4899;
+    --accent-3-rgb: 236, 72, 153;
+    --background-color: #ffffff;
+    --text-color: #1f2937;
+    --surface-color: #f3f4f6;
+    --border-color: #e5e7eb;
+    --hover-color: #3b82f6;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --card-bg: #ffffff;
+}
+
+/* 暗黑主题 */
+[data-theme="dark"] {
+    --primary-color: #3b82f6;
+    --primary-rgb: 59, 130, 246;
+    --secondary-color: #34d399;
+    --secondary-rgb: 52, 211, 153;
+    --accent-1: #fbbf24;
+    --accent-1-rgb: 251, 191, 36;
+    --accent-2: #a78bfa;
+    --accent-2-rgb: 167, 139, 250;
+    --accent-3: #f472b6;
+    --accent-3-rgb: 244, 114, 182;
+    --background-color: #111827;
+    --text-color: #f3f4f6;
+    --surface-color: #1f2937;
+    --border-color: #374151;
+    --hover-color: #60a5fa;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --card-bg: #1f2937;
+}
+
+/* 基础样式重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Source Han Sans CN', sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* 布局容器 */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* 响应式断点 */
+@media (max-width: 1024px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* 通用按钮样式 */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--hover-color);
+  transform: translateY(-2px);
+}
+
+/* 卡片样式 */
+.card {
+  background-color: var(--card-bg);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px var(--shadow-color);
+}

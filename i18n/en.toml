@@ -1,0 +1,26 @@
+[toggleTheme]
+other = "Toggle Theme"
+
+[readMore]
+other = "Read More"
+
+[search]
+other = "Search"
+
+[noSearchResults]
+other = "No results found"
+
+[categories]
+other = "Categories"
+
+[tags]
+other = "Tags"
+
+[publishedOn]
+other = "Published on"
+
+[lastModified]
+other = "Last modified"
+
+[share]
+other = "Share"

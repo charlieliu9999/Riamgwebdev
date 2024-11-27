@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on 医学影像检查项目名称及编码标准</title>
+    <link>http://localhost:53716/tags/</link>
+    <description>Recent content in Tags on 医学影像检查项目名称及编码标准</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 25 Nov 2024 23:47:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:53716/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Technology</title>
+      <link>http://localhost:53716/tags/technology/</link>
+      <pubDate>Mon, 25 Nov 2024 23:47:00 +0000</pubDate>
+      <guid>http://localhost:53716/tags/technology/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Standard</title>
+      <link>http://localhost:53716/tags/standard/</link>
+      <pubDate>Mon, 25 Nov 2024 23:42:00 +0000</pubDate>
+      <guid>http://localhost:53716/tags/standard/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DICOM</title>
+      <link>http://localhost:53716/tags/dicom/</link>
+      <pubDate>Thu, 25 Jan 2024 10:00:00 +0800</pubDate>
+      <guid>http://localhost:53716/tags/dicom/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>医学影像</title>
+      <link>http://localhost:53716/tags/%E5%8C%BB%E5%AD%A6%E5%BD%B1%E5%83%8F/</link>
+      <pubDate>Thu, 25 Jan 2024 10:00:00 +0800</pubDate>
+      <guid>http://localhost:53716/tags/%E5%8C%BB%E5%AD%A6%E5%BD%B1%E5%83%8F/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>最佳实践</title>
+      <link>http://localhost:53716/tags/%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</link>
+      <pubDate>Thu, 25 Jan 2024 10:00:00 +0800</pubDate>
+      <guid>http://localhost:53716/tags/%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>标准化实践</title>
+      <link>http://localhost:53716/tags/%E6%A0%87%E5%87%86%E5%8C%96%E5%AE%9E%E8%B7%B5/</link>
+      <pubDate>Thu, 25 Jan 2024 10:00:00 +0800</pubDate>
+      <guid>http://localhost:53716/tags/%E6%A0%87%E5%87%86%E5%8C%96%E5%AE%9E%E8%B7%B5/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>标准化</title>
+      <link>http://localhost:53716/tags/%E6%A0%87%E5%87%86%E5%8C%96/</link>
+      <pubDate>Sun, 21 Jan 2024 15:00:00 +0800</pubDate>
+      <guid>http://localhost:53716/tags/%E6%A0%87%E5%87%86%E5%8C%96/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>设备标准</title>
+      <link>http://localhost:53716/tags/%E8%AE%BE%E5%A4%87%E6%A0%87%E5%87%86/</link>
+      <pubDate>Sun, 21 Jan 2024 15:00:00 +0800</pubDate>
+      <guid>http://localhost:53716/tags/%E8%AE%BE%E5%A4%87%E6%A0%87%E5%87%86/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>命名规范</title>
+      <link>http://localhost:53716/tags/%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/</link>
+      <pubDate>Sat, 20 Jan 2024 10:00:00 +0800</pubDate>
+      <guid>http://localhost:53716/tags/%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>影像检查</title>
+      <link>http://localhost:53716/tags/%E5%BD%B1%E5%83%8F%E6%A3%80%E6%9F%A5/</link>
+      <pubDate>Sat, 20 Jan 2024 10:00:00 +0800</pubDate>
+      <guid>http://localhost:53716/tags/%E5%BD%B1%E5%83%8F%E6%A3%80%E6%9F%A5/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>标准更新</title>
+      <link>http://localhost:53716/tags/%E6%A0%87%E5%87%86%E6%9B%B4%E6%96%B0/</link>
+      <pubDate>Sat, 20 Jan 2024 10:00:00 +0800</pubDate>
+      <guid>http://localhost:53716/tags/%E6%A0%87%E5%87%86%E6%9B%B4%E6%96%B0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>医学影像标准</title>
+      <link>http://localhost:53716/tags/%E5%8C%BB%E5%AD%A6%E5%BD%B1%E5%83%8F%E6%A0%87%E5%87%86/</link>
+      <pubDate>Mon, 01 Jan 2024 23:46:00 +0000</pubDate>
+      <guid>http://localhost:53716/tags/%E5%8C%BB%E5%AD%A6%E5%BD%B1%E5%83%8F%E6%A0%87%E5%87%86/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

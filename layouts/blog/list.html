@@ -1,0 +1,65 @@
+{{ define "main" }}
+<link rel="stylesheet" href="/css/blog/style.css">
+
+<div class="blog-container">
+    <!-- 推荐文章 -->
+    {{ $featured := where .Pages "Params.featured" true | first 1 }}
+    {{ range $featured }}
+    <div class="featured-post">
+        <div class="post-card featured">
+            {{ with .Params.thumbnail }}
+            <div class="post-image" style="background-image: url('{{ . }}')"></div>
+            {{ end }}
+            <div class="post-content">
+                <h2 class="post-title">{{ .Title }}</h2>
+                <div class="post-meta">
+                    <span class="post-date">{{ .Date.Format "2006-01-02" }}</span>
+                    {{ with .Params.author }} • <span class="post-author">{{ . }}</span>{{ end }}
+                    {{ with .Params.categories }}
+                    • <span class="post-categories">
+                        {{ range . }}
+                        <span class="category">{{ . }}</span>
+                        {{ end }}
+                    </span>
+                    {{ end }}
+                </div>
+                <div class="post-excerpt">{{ .Description }}</div>
+                <a href="{{ .RelPermalink }}" class="read-more">阅读全文</a>
+            </div>
+        </div>
+    </div>
+    {{ end }}
+
+    <!-- 博客列表 -->
+    <div class="post-grid">
+        {{ $regularPages := where .Pages "Params.draft" false }}
+        {{ $paginator := .Paginate $regularPages 12 }}
+        {{ range $paginator.Pages }}
+        <article class="post-card">
+            {{ with .Params.thumbnail }}
+            <div class="post-image" style="background-image: url('{{ . }}')"></div>
+            {{ end }}
+            <div class="post-content">
+                <h3 class="post-title">{{ .Title }}</h3>
+                <div class="post-meta">
+                    <span class="post-date">{{ .Date.Format "2006-01-02" }}</span>
+                    {{ with .Params.author }} • <span class="post-author">{{ . }}</span>{{ end }}
+                    {{ with .Params.categories }}
+                    • <span class="post-categories">
+                        {{ range . }}
+                        <span class="category">{{ . }}</span>
+                        {{ end }}
+                    </span>
+                    {{ end }}
+                </div>
+                <div class="post-excerpt">{{ .Description }}</div>
+                <a href="{{ .RelPermalink }}" class="read-more">阅读全文</a>
+            </div>
+        </article>
+        {{ end }}
+    </div>
+
+    <!-- 分页 -->
+    {{ template "_internal/pagination.html" . }}
+</div>
+{{ end }}

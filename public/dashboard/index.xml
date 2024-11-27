@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>数据看板 on 医学影像检查项目名称及编码标准</title>
+    <link>http://localhost:53716/dashboard/</link>
+    <description>Recent content in 数据看板 on 医学影像检查项目名称及编码标准</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <atom:link href="http://localhost:53716/dashboard/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

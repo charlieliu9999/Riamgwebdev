@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>影像检查 on 医学影像检查项目名称及编码标准</title>
+    <link>http://localhost:53716/tags/%E5%BD%B1%E5%83%8F%E6%A3%80%E6%9F%A5/</link>
+    <description>Recent content in 影像检查 on 医学影像检查项目名称及编码标准</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 20 Jan 2024 10:00:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:53716/tags/%E5%BD%B1%E5%83%8F%E6%A3%80%E6%9F%A5/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>医学影像检查命名规范重大更新</title>
+      <link>http://localhost:53716/news/2024/01/medical-standards-update/</link>
+      <pubDate>Sat, 20 Jan 2024 10:00:00 +0800</pubDate>
+      <guid>http://localhost:53716/news/2024/01/medical-standards-update/</guid>
+      <description>&lt;p&gt;近日，全国医学影像标准化委员会正式发布了新版《医学影像检查命名规范》，这是继2020年版本后的首次重大更新。新版本在保持原有框架的基础上，针对临床实践中遇到的新问题进行了多项改进和补充。&lt;/p&gt;&#xA;&lt;h2 id=&#34;主要更新内容&#34;&gt;主要更新内容&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-检查类型细分&#34;&gt;1. 检查类型细分&lt;/h3&gt;&#xA;&lt;p&gt;新版本对检查类型进行了更细致的划分，特别是在以下方面：&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:53716/images/types.jpg&#34; alt=&#34;检查类型细分&#34;&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;MRI序列命名规范化&lt;/li&gt;&#xA;&lt;li&gt;CT增强扫描方案标准化&lt;/li&gt;&#xA;&lt;li&gt;超声检查部位描述统一化&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2-编码体系优化&#34;&gt;2. 编码体系优化&lt;/h3&gt;&#xA;&lt;p&gt;为提高信息系统的兼容性，新版本优化了编码体系：&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:53716/images/coding-system.jpg&#34; alt=&#34;编码体系&#34;&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;采用分层编码结构&lt;/li&gt;&#xA;&lt;li&gt;预留扩展空间&lt;/li&gt;&#xA;&lt;li&gt;增加双语对照&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;3-实施时间表&#34;&gt;3. 实施时间表&lt;/h3&gt;&#xA;&lt;p&gt;新版本将分阶段实施：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;2024年3月：开始试行&lt;/li&gt;&#xA;&lt;li&gt;2024年6月：全面实施&lt;/li&gt;&#xA;&lt;li&gt;2024年12月：完成全部系统升级&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;对医疗机构的影响&#34;&gt;对医疗机构的影响&lt;/h2&gt;&#xA;&lt;p&gt;此次更新将对医疗机构产生深远影响：&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:53716/images/impact.jpg&#34; alt=&#34;实施影响&#34;&gt;&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;信息系统需要升级&lt;/li&gt;&#xA;&lt;li&gt;工作流程需要调整&lt;/li&gt;&#xA;&lt;li&gt;人员培训需要跟进&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;下一步工作重点&#34;&gt;下一步工作重点&lt;/h2&gt;&#xA;&lt;p&gt;标准化委员会将重点开展以下工作：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;组织培训会议&lt;/li&gt;&#xA;&lt;li&gt;编写实施指南&lt;/li&gt;&#xA;&lt;li&gt;建立反馈机制&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;我们将持续关注标准实施过程中的问题，及时收集反馈并进行必要的调整。如有任何建议，欢迎通过官方渠道反馈。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

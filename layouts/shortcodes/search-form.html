@@ -1,0 +1,124 @@
+<div class="search-form">
+    <form id="codeSearchForm" action="/search-results/" method="GET">
+        <div class="search-input-group">
+            <input type="text" 
+                   id="searchQuery" 
+                   name="q" 
+                   placeholder="输入检查项目名称或关键词..." 
+                   required>
+            <button type="submit">搜索</button>
+        </div>
+        
+        <div class="search-filters">
+            <div class="filter-group">
+                <label>检查类型：</label>
+                <select name="type">
+                    <option value="">全部</option>
+                    <option value="ct">CT</option>
+                    <option value="mri">MRI</option>
+                    <option value="xray">X射线</option>
+                    <option value="ultrasound">超声</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label>部位：</label>
+                <select name="region">
+                    <option value="">全部</option>
+                    <option value="head">头部</option>
+                    <option value="chest">胸部</option>
+                    <option value="abdomen">腹部</option>
+                    <option value="limbs">四肢</option>
+                </select>
+            </div>
+        </div>
+    </form>
+</div>
+
+<style>
+.search-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.search-input-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.search-input-group input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.search-input-group input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.search-input-group button {
+    padding: 0.75rem 2rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-input-group button:hover {
+    background-color: #004494;
+}
+
+.search-filters {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.filter-group label {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+.filter-group select {
+    padding: 0.5rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+    .search-input-group {
+        flex-direction: column;
+    }
+    
+    .search-filters {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .filter-group {
+        width: 100%;
+    }
+    
+    .filter-group select {
+        flex: 1;
+    }
+}
+</style>

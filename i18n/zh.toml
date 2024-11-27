@@ -1,0 +1,26 @@
+[toggleTheme]
+other = "切换主题"
+
+[readMore]
+other = "阅读更多"
+
+[search]
+other = "搜索"
+
+[noSearchResults]
+other = "没有找到相关结果"
+
+[categories]
+other = "分类"
+
+[tags]
+other = "标签"
+
+[publishedOn]
+other = "发布于"
+
+[lastModified]
+other = "最后修改"
+
+[share]
+other = "分享"

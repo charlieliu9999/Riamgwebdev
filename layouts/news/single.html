@@ -1,0 +1,85 @@
+{{ define "main" }}
+<link rel="stylesheet" href="/css/news/style.css">
+
+<article class="news-detail">
+    <!-- 文章头部 -->
+    <header class="news-header">
+        <h1 class="news-title">{{ .Title }}</h1>
+        <div class="news-meta-detail">
+            <span class="date">{{ .Date.Format "2006-01-02" }}</span>
+            {{ with .Params.author }}<span class="author">作者：{{ . }}</span>{{ end }}
+            {{ with .Params.categories }}
+            <span class="category">分类：
+                {{ range . }}
+                <a href="/categories/{{ . | urlize }}">{{ . }}</a>
+                {{ end }}
+            </span>
+            {{ end }}
+        </div>
+        {{ with .Params.thumbnail }}
+        <img src="{{ . }}" alt="{{ $.Title }}" class="news-thumbnail">
+        {{ end }}
+    </header>
+
+    <!-- 文章内容 -->
+    <div class="news-content-detail">
+        {{ .Content }}
+    </div>
+
+    <!-- 标签 -->
+    {{ with .Params.tags }}
+    <div class="news-tags">
+        <span>标签：</span>
+        {{ range . }}
+        <a href="/tags/{{ . | urlize }}" class="news-tag">#{{ . }}</a>
+        {{ end }}
+    </div>
+    {{ end }}
+
+    <!-- 分享按钮 -->
+    <div class="share-buttons">
+        <a href="#" class="share-button weixin" onclick="shareToWeChat()">分享到微信</a>
+        <a href="#" class="share-button weibo" onclick="shareToWeibo()">分享到微博</a>
+    </div>
+
+    <!-- 相关文章 -->
+    {{ $related := .Site.RegularPages.Related . | first 3 }}
+    {{ with $related }}
+    <div class="related-news">
+        <h3>相关文章</h3>
+        <div class="news-grid">
+            {{ range . }}
+            <article class="news-card">
+                {{ with .Params.thumbnail }}
+                <div class="news-image" style="background-image: url('{{ . }}')"></div>
+                {{ end }}
+                <div class="news-content">
+                    <h3 class="news-title">{{ .Title }}</h3>
+                    <div class="news-meta">
+                        <span>{{ .Date.Format "2006-01-02" }}</span>
+                    </div>
+                    <div class="news-excerpt">{{ .Description }}</div>
+                    <a href="{{ .RelPermalink }}" class="read-more">阅读更多</a>
+                </div>
+            </article>
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
+</article>
+
+<!-- 分享功能脚本 -->
+<script>
+function shareToWeChat() {
+    // 实现微信分享逻辑
+    alert('请截图或使用微信扫描二维码分享');
+}
+
+function shareToWeibo() {
+    // 实现微博分享逻辑
+    const title = encodeURIComponent(document.title);
+    const url = encodeURIComponent(window.location.href);
+    window.open(`http://service.weibo.com/share/share.php?title=${title}&url=${url}`);
+}
+</script>
+{{ end }}

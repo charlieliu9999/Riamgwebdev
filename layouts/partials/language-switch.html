@@ -1,0 +1,11 @@
+{{ if .IsTranslated }}
+<div class="language-switch">
+    <button class="lang-btn" onclick="window.location.href='{{ .Site.Home.Permalink }}'" {{ if eq .Site.Language.Lang "zh" }}aria-current="true"{{ end }}>
+        中
+    </button>
+    <span class="lang-separator">/</span>
+    <button class="lang-btn" onclick="window.location.href='/en/'" {{ if eq .Site.Language.Lang "en" }}aria-current="true"{{ end }}>
+        EN
+    </button>
+</div>
+{{ end }}

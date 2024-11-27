@@ -1,0 +1,86 @@
+{{ define "main" }}
+<link rel="stylesheet" href="/css/standards.css">
+<div class="standards-container">
+    <!-- 侧边导航栏 -->
+    <nav class="standards-sidebar">
+        <div class="nav-title">标准文档目录</div>
+        <ul>
+            {{ with .Site.GetPage "/standards" }}
+                {{ range .Pages.ByWeight }}
+                <li>
+                    <a href="{{ .RelPermalink }}" {{ if eq . $ }}class="active"{{ end }}>
+                        {{ .Title }}
+                    </a>
+                </li>
+                {{ end }}
+            {{ end }}
+        </ul>
+    </nav>
+
+    <!-- 主要内容区域 -->
+    <main class="standards-content">
+        <article>
+            <h1>{{ .Title }}</h1>
+            
+            <!-- 文档元信息 -->
+            <div class="doc-meta">
+                <span>最后更新: {{ .Lastmod.Format "2006-01-02" }}</span>
+                {{ with .Description }}
+                <span class="description"> | {{ . }}</span>
+                {{ end }}
+            </div>
+
+            <!-- 标准类别列表 -->
+            {{ range .Params.categories }}
+            <section class="standard-category">
+                <div class="category-header">
+                    <i class="fas {{ .icon }}"></i>
+                    <h2>{{ .name }}</h2>
+                </div>
+                <p class="category-description">{{ .description }}</p>
+                
+                <!-- 标准列表 -->
+                <div class="standards-list">
+                    {{ range .standards }}
+                    <div class="standard-item">
+                        <div class="standard-header">
+                            <h3>{{ .name }}</h3>
+                            <span class="standard-code">{{ .code }}</span>
+                        </div>
+                        <p class="standard-description">{{ .description }}</p>
+                        <div class="standard-details">
+                            <div class="detail-item">
+                                <h4>适用范围</h4>
+                                <p>{{ .scope }}</p>
+                            </div>
+                            <div class="detail-item">
+                                <h4>执行要求</h4>
+                                <p>{{ .requirements }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>
+            </section>
+            {{ end }}
+
+            <!-- 文档内容 -->
+            {{ .Content }}
+        </article>
+    </main>
+</div>
+
+<!-- 返回顶部按钮的JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // 高亮当前页面在导航中的位置
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.standards-sidebar a');
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
+        }
+    });
+});
+</script>
+{{ end }}

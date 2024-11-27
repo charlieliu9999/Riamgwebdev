@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../../../../.."
+		}
+	],
+	"settings": {
+		"i18n-ally.localesPaths": [
+			"i18n",
+			"themes/ananke/i18n"
+		],
+		"editor.experimentalEditContextEnabled": true,
+		"editor.experimental.treeSitterTelemetry": true,
+		"editor.experimentalInlineEdit.enabled": true
+	}
+}

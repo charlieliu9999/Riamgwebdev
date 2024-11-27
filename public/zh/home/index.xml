@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Homes on 医学影像标准</title>
+    <link>http://localhost:53306/zh/home/</link>
+    <description>Recent content in Homes on 医学影像标准</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <atom:link href="http://localhost:53306/zh/home/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>为什么需要医学影像检查标准化？</title>
+      <link>http://localhost:53306/zh/home/standards-intro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:53306/zh/home/standards-intro/</guid>
+      <description>医学影像检查标准化是提升医疗质量的关键。它不仅能减少不必要的沟通，提高工作效率，促进医疗机构间的数据共享与协作，推动医学研究和人工智能的发展。</description>
+    </item>
+  </channel>
+</rss>

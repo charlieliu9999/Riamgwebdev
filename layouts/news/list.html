@@ -1,0 +1,160 @@
+{{ define "main" }}
+<div class="news-section">
+    <div class="container">
+        <header class="section-header">
+            <h1>{{ .Title }}</h1>
+            <p class="description">{{ .Description }}</p>
+        </header>
+
+        <div class="news-grid">
+            {{ $paginator := .Paginate (where .Pages "Type" "news") }}
+            {{ range $paginator.Pages }}
+            <article class="news-card">
+                {{ if .Params.thumbnail }}
+                <div class="news-image">
+                    <img src="{{ .Params.thumbnail }}" alt="{{ .Title }}">
+                </div>
+                {{ end }}
+                <div class="news-content">
+                    <h2 class="news-title">
+                        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    </h2>
+                    <div class="news-meta">
+                        <span class="date">{{ .Date.Format "2006-01-02" }}</span>
+                        {{ with .Params.author }}
+                        <span class="author">{{ . }}</span>
+                        {{ end }}
+                    </div>
+                    <div class="news-excerpt">
+                        {{ .Description }}
+                    </div>
+                    <a href="{{ .RelPermalink }}" class="read-more">阅读更多</a>
+                </div>
+            </article>
+            {{ end }}
+        </div>
+
+        {{ template "_internal/pagination.html" . }}
+    </div>
+</div>
+
+<style>
+.news-section {
+    padding: 2rem 0;
+    background: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.section-header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.section-header .description {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.news-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+}
+
+.news-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 1.5rem;
+}
+
+.news-title {
+    margin: 0 0 1rem;
+    font-size: 1.25rem;
+}
+
+.news-title a {
+    color: #333;
+    text-decoration: none;
+}
+
+.news-title a:hover {
+    color: #007bff;
+}
+
+.news-meta {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.news-meta span:not(:last-child):after {
+    content: "•";
+    margin: 0 0.5rem;
+}
+
+.news-excerpt {
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.read-more {
+    display: inline-block;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.pagination a {
+    padding: 0.5rem 1rem;
+    background: white;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333;
+}
+
+.pagination a:hover {
+    background: #007bff;
+    color: white;
+}
+</style>
+{{ end }}

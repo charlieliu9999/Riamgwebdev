@@ -1,0 +1,66 @@
+<div class="region-distribution">
+    <canvas id="regionChart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const ctx = document.getElementById('regionChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ['华东', '华北', '华南', '西南', '东北', '西北', '华中'],
+            datasets: [{
+                data: [30, 20, 15, 12, 10, 8, 5],
+                backgroundColor: [
+                    '#4e73df',
+                    '#1cc88a',
+                    '#36b9cc',
+                    '#f6c23e',
+                    '#e74a3b',
+                    '#858796',
+                    '#5a5c69'
+                ]
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'right',
+                    labels: {
+                        font: {
+                            size: 14
+                        }
+                    }
+                },
+                title: {
+                    display: true,
+                    text: '各地区实施分布',
+                    font: {
+                        size: 16
+                    }
+                }
+            }
+        }
+    });
+});
+</script>
+
+<style>
+.region-distribution {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 2rem 0;
+    height: 400px;
+}
+
+@media (max-width: 768px) {
+    .region-distribution {
+        height: 300px;
+    }
+}
+</style>

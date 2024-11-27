@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>技术博客 on 医学影像检查项目名称及编码标准</title>
+    <link>http://localhost:53716/blog/</link>
+    <description>Recent content in 技术博客 on 医学影像检查项目名称及编码标准</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 25 Jan 2024 10:00:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:53716/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DICOM标准实践指南：从入门到精通</title>
+      <link>http://localhost:53716/blog/2024/01/dicom-practice/</link>
+      <pubDate>Thu, 25 Jan 2024 10:00:00 +0800</pubDate>
+      <guid>http://localhost:53716/blog/2024/01/dicom-practice/</guid>
+      <description>&lt;h2 id=&#34;dicom标准简介&#34;&gt;DICOM标准简介&lt;/h2&gt;&#xA;&lt;p&gt;DICOM（Digital Imaging and Communications in Medicine）是医学图像和相关信息的国际标准。它定义了医学图像数据的格式和通信协议，是现代医学影像系统的基础。&lt;/p&gt;&#xA;&lt;h2 id=&#34;核心概念&#34;&gt;核心概念&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-信息模型&#34;&gt;1. 信息模型&lt;/h3&gt;&#xA;&lt;p&gt;DICOM采用面向对象的方法来描述医学影像信息：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Patient（患者）&lt;/li&gt;&#xA;&lt;li&gt;Study（检查）&lt;/li&gt;&#xA;&lt;li&gt;Series（序列）&lt;/li&gt;&#xA;&lt;li&gt;Image（图像）&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2-数据元素&#34;&gt;2. 数据元素&lt;/h3&gt;&#xA;&lt;p&gt;DICOM使用Tag来唯一标识数据元素，例如：&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(0010,0010) Patient Name&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(0008,0020) Study Date&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(0028,0010) Rows&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(0028,0011) Columns&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;实践应用&#34;&gt;实践应用&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-图像存储&#34;&gt;1. 图像存储&lt;/h3&gt;&#xA;&lt;p&gt;DICOM图像存储采用特殊的编码方式，支持多种压缩格式：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;无损压缩&lt;/li&gt;&#xA;&lt;li&gt;JPEG压缩&lt;/li&gt;&#xA;&lt;li&gt;JPEG2000压缩&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2-网络通信&#34;&gt;2. 网络通信&lt;/h3&gt;&#xA;&lt;p&gt;DICOM定义了多种网络服务：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;C-STORE：用于图像传输&lt;/li&gt;&#xA;&lt;li&gt;C-FIND：用于查询&lt;/li&gt;&#xA;&lt;li&gt;C-MOVE：用于检索&lt;/li&gt;&#xA;&lt;li&gt;C-ECHO：用于连接测试&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;高级特性&#34;&gt;高级特性&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-结构化报告&#34;&gt;1. 结构化报告&lt;/h3&gt;&#xA;&lt;p&gt;DICOM SR（Structured Reporting）提供了标准化的报告格式：&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;CONTAINER: Imaging Report&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  TEXT: Finding&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    CODE: Normal&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  NUM: Measurement&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    VALUE: 10&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    UNIT: mm&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;2-数学表达式示例&#34;&gt;2. 数学表达式示例&lt;/h3&gt;&#xA;&lt;p&gt;在医学图像处理中，我们经常需要进行各种计算。例如，图像的信噪比（SNR）计算：&lt;/p&gt;&#xA;&lt;p&gt;$$ SNR = 20 \log_{10}(\frac{S}{N}) $$&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

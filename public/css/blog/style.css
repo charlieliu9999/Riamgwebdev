@@ -1,0 +1,183 @@
+.blog-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* 推荐文章样式 */
+.featured-post {
+    margin-bottom: 3rem;
+}
+
+.post-card.featured {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.post-card.featured .post-image {
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* 博客列表样式 */
+.post-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.post-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.post-card:hover {
+    transform: translateY(-4px);
+}
+
+.post-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.post-content {
+    padding: 1.5rem;
+}
+
+.post-title {
+    margin: 0 0 1rem;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.post-meta {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.post-categories {
+    display: inline-flex;
+    gap: 0.5rem;
+}
+
+.category {
+    background: #f0f0f0;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.8em;
+}
+
+.post-excerpt {
+    color: #555;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.read-more {
+    display: inline-block;
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* 博客文章详情页样式 */
+.blog-post {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.post-featured-image {
+    margin: 2rem -2rem;
+}
+
+.post-featured-image img {
+    width: 100%;
+    height: auto;
+}
+
+.table-of-contents {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.table-of-contents h2 {
+    margin-top: 0;
+}
+
+.post-content {
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.post-content h2, .post-content h3 {
+    margin-top: 2rem;
+}
+
+.post-footer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+}
+
+.post-tags {
+    margin-bottom: 2rem;
+}
+
+.tag {
+    display: inline-block;
+    background: #f0f0f0;
+    padding: 4px 12px;
+    border-radius: 16px;
+    margin-right: 8px;
+    color: #666;
+}
+
+.post-comments {
+    margin-top: 3rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .post-card.featured {
+        grid-template-columns: 1fr;
+    }
+    
+    .post-card.featured .post-image {
+        height: 250px;
+    }
+    
+    .blog-post {
+        padding: 1.5rem;
+    }
+    
+    .post-featured-image {
+        margin: 1.5rem -1.5rem;
+    }
+}

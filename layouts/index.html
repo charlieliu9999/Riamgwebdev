@@ -1,0 +1,82 @@
+{{ define "main" }}
+<main class="home-page">
+    <!-- 顶部英雄区域 -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>{{ .Title }}</h1>
+                <p class="hero-description">{{ .Description }}</p>
+                <div class="hero-actions">
+                    <a href="/standards/" class="btn btn-primary">开始使用</a>
+                    <a href="/about/" class="btn btn-secondary">了解更多</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 标准化说明部分 -->
+    <section class="standards-intro">
+        <div class="container">
+            <div class="section-header">
+                <h2>为什么需要医学影像检查标准化？</h2>
+            </div>
+            <div class="intro-footer">
+                <p class="intro-summary">医学影像检查标准化是提升医疗质量的关键。它不仅能减少不必要的沟通，提供工作效率，促进医疗机构间的数据共享与协作，推动医学研究和人工智能的发展。</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3>提升诊断质量</h3>
+                    <p>统一的检查标准确保医疗团队能准确理解和执行检查要求，减少误诊风险，提高诊断准确性。</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>优化工作流程</h3>
+                    <p>标准化流程简化医疗团队沟通，加速决策过程，显著提升工作效率和服务质量。</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>数据智能管理</h3>
+                    <p>统一的命名体系便于数据收集、分析和研究，支持医疗机构进行质量评估和持续改进。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 最新动态 -->
+    <section class="news-section">
+        <div class="container">
+            <h2>最新动态</h2>
+            {{ range first 3 (where .Site.RegularPages "Section" "news") }}
+            <article class="news-item">
+                <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                <time>{{ .Date.Format "2006-01-02" }}</time>
+                <p>{{ .Summary }}</p>
+            </article>
+            {{ end }}
+        </div>
+    </section>
+
+    <!-- 快速链接 -->
+    <section class="quick-links">
+        <div class="container">
+            <h2>快速链接</h2>
+            <div class="links-grid">
+                <a href="/standards/" class="link-card">
+                    <h3>标准文档</h3>
+                    <p>浏览完整的标准文档</p>
+                </a>
+                <a href="/search/" class="link-card">
+                    <h3>标准查询</h3>
+                    <p>快速查找标准编码</p>
+                </a>
+                <a href="/ai-playground/" class="link-card">
+                    <h3>AI编码</h3>
+                    <p>体验智能编码服务</p>
+                </a>
+                <a href="/dashboard/" class="link-card">
+                    <h3>数据看板</h3>
+                    <p>查看数据统计分析</p>
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+{{ end }}

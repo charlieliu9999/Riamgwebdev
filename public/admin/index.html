@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>医学影像标准化新闻管理后台</title>
+</head>
+<body>
+    <!-- Include the script that builds the page and powers Decap CMS -->
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script>
+        // 配置中文界面
+        CMS.registerLocale('zh', {
+            messages: {
+                'app.header.content': '内容',
+                'app.header.workflow': '工作流',
+                'app.header.media': '媒体',
+                'app.header.quickAdd': '快速添加',
+                'collection.sidebar.collections': '内容集合',
+                'collection.sidebar.searchAll': '搜索所有',
+                'collection.sidebar.viewAll': '查看所有',
+                'collection.collectionTop.sortBy': '排序方式',
+                'collection.collectionTop.newButton': '新建'
+            }
+        });
+        CMS.registerPreviewStyle("/css/news/style.css");
+    </script>
+</body>
+</html>

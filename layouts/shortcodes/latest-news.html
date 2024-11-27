@@ -1,0 +1,66 @@
+{{ $news := where .Site.RegularPages "Section" "news" }}
+{{ $latestNews := first 3 (sort $news "Date" "desc") }}
+
+<div class="latest-news">
+    {{ range $latestNews }}
+    <div class="news-item">
+        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <div class="news-meta">
+            <span class="date">{{ .Date.Format "2006-01-02" }}</span>
+        </div>
+        <p>{{ .Summary }}</p>
+        <a href="{{ .RelPermalink }}" class="read-more">阅读更多</a>
+    </div>
+    {{ end }}
+</div>
+
+<style>
+.latest-news {
+    display: grid;
+    gap: 2rem;
+}
+
+.news-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.news-item h3 {
+    margin: 0 0 1rem;
+}
+
+.news-item h3 a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.news-item h3 a:hover {
+    text-decoration: underline;
+}
+
+.news-meta {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.read-more {
+    display: inline-block;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .latest-news {
+        gap: 1rem;
+    }
+}
+</style>

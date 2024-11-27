@@ -1,0 +1,95 @@
+<div class="ai-playground">
+    <div class="input-section">
+        <textarea id="project-description" 
+                  placeholder="请输入医学影像检查项目描述..."
+                  rows="4"></textarea>
+        <button id="get-code" onclick="getAIRecommendation()">获取编码建议</button>
+    </div>
+    <div id="result-section" class="result-section" style="display: none;">
+        <h3>推荐编码</h3>
+        <div id="recommendation-result"></div>
+    </div>
+</div>
+
+<style>
+.ai-playground {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.input-section {
+    margin-bottom: 2rem;
+}
+
+textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    resize: vertical;
+}
+
+button {
+    background: #0056b3;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background: #003d82;
+}
+
+.result-section {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 4px;
+    margin-top: 2rem;
+}
+
+#recommendation-result {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+</style>
+
+<script>
+function getAIRecommendation() {
+    const description = document.getElementById('project-description').value;
+    if (!description) {
+        alert('请输入项目描述');
+        return;
+    }
+    
+    // 显示加载状态
+    const resultSection = document.getElementById('result-section');
+    const recommendationResult = document.getElementById('recommendation-result');
+    resultSection.style.display = 'block';
+    recommendationResult.innerHTML = '正在分析...';
+    
+    // 这里应该是调用后端API的代码
+    // 目前使用模拟数据演示
+    setTimeout(() => {
+        const mockResult = {
+            code: 'XR-CHEST-PA-LAT',
+            name: '胸部X线检查（正侧位）',
+            confidence: 0.95
+        };
+        
+        recommendationResult.innerHTML = `
+            <div style="margin-bottom: 1rem;">
+                <strong>标准编码：</strong> ${mockResult.code}<br>
+                <strong>项目名称：</strong> ${mockResult.name}<br>
+                <strong>置信度：</strong> ${(mockResult.confidence * 100).toFixed(1)}%
+            </div>
+        `;
+    }, 1000);
+}
+</script>

@@ -1,0 +1,491 @@
+/* 数据概览样式 */
+.data-overview {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+    gap: 1rem;
+}
+
+.overview-item {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.overview-item .number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #0056b3;
+    margin: 0.5rem 0;
+}
+
+.overview-item .label {
+    color: #6c757d;
+}
+
+/* 文档下载样式 */
+.document-download {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.download-item {
+    padding: 1.5rem;
+    background: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.download-button {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    margin-top: 1rem;
+    background: #0056b3;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.download-button:hover {
+    background: #003d82;
+}
+
+/* 响应式导航栏 */
+@media (max-width: 768px) {
+    .data-overview {
+        flex-direction: column;
+    }
+    
+    .overview-item {
+        width: 100%;
+    }
+}
+
+/* 全局样式调整 */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #2c3e50;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+a {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* 主题相关样式 */
+:root[data-theme="light"] {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --header-bg: #f8f9fa;
+    --link-color: #007bff;
+    --border-color: #dee2e6;
+}
+
+:root[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #ffffff;
+    --header-bg: #2d2d2d;
+    --link-color: #66b0ff;
+    --border-color: #404040;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* 主题切换按钮样式 */
+.theme-switch-wrapper {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 999;
+}
+
+.theme-switch {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--border-color);
+    background: var(--bg-color);
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.theme-switch:hover {
+    transform: scale(1.1);
+}
+
+.theme-switch-icon {
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+
+/* 明亮主题图标 */
+:root[data-theme="light"] .theme-switch-icon::before {
+    content: "🌞";
+}
+
+/* 暗黑主题图标 */
+:root[data-theme="dark"] .theme-switch-icon::before {
+    content: "🌙";
+}
+
+/* 链接样式 */
+a {
+    color: var(--link-color);
+    transition: color 0.3s;
+}
+
+/* 头部样式 */
+.site-header {
+    background-color: var(--header-bg);
+    transition: background-color 0.3s;
+}
+
+/* 语言切换按钮样式 */
+.language-switch {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+.language-switch select {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+/* 导航栏样式 */
+.site-nav {
+    background-color: var(--header-bg);
+    padding: 0.5rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.site-nav .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.site-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.main-menu {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.menu-item {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.3rem 0.5rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu-item.active {
+    background-color: var(--link-color);
+    color: white;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .site-nav .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-right {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .main-menu {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-item {
+        padding: 0.75rem;
+    }
+
+    .language-switch {
+        margin: 1rem 0;
+    }
+}
+
+/* 主要内容区域调整 */
+main {
+    margin-top: 60px; /* 为固定导航栏留出空间 */
+    padding: 1rem;
+    min-height: calc(100vh - 60px);
+}
+
+/* 深色主题变量 */
+:root {
+    /* 浅色主题默认值 */
+    --bg-color: #ffffff;
+    --card-bg: #ffffff;
+    --text-color: #2c3e50;
+    --text-secondary: #34495e;
+    --link-color: #3498db;
+    --card-border: #e1e8ed;
+    --card-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* 深色主题 */
+.dark-theme {
+    --bg-color: #1a1a1a;
+    --card-bg: #2d2d2d;
+    --text-color: #ffffff;
+    --text-secondary: #e1e1e1;
+    --link-color: #5dade2;
+    --card-border: #404040;
+    --card-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* 全局背景色 */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+/* 标准列表卡片样式 */
+.standards-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+/* 卡片样式 */
+.standard-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.standard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-color: var(--link-color);
+}
+
+/* 标题样式 */
+.standard-card h2 {
+    color: var(--text-color);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* 段落样式 */
+.standard-card p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+    line-height: 1.6;
+}
+
+/* 链接样式 */
+.standard-card a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    margin-top: auto;
+    padding: 0.5rem 0;
+}
+
+.standard-card a:hover {
+    text-decoration: underline;
+}
+
+/* 主题切换按钮 */
+.theme-switch-wrapper {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    z-index: 999;
+}
+
+.theme-switch {
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    position: relative;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* 强制覆盖主题的暗色样式 */
+.dark-theme .bg-black,
+.dark-theme .bg-near-black,
+.dark-theme .bg-dark-gray,
+.dark-theme .bg-mid-gray {
+    background-color: var(--bg-color) !important;
+}
+
+.dark-theme .near-black,
+.dark-theme .dark-gray,
+.dark-theme .mid-gray,
+.dark-theme .gray {
+    color: var(--text-color) !important;
+}
+
+/* 语言切换按钮样式 */
+.language-switch {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.lang-btn[aria-current="true"] {
+    opacity: 1;
+    font-weight: 500;
+}
+
+.lang-separator {
+    color: var(--text-color);
+    opacity: 0.5;
+}
+
+/* 主题切换按钮样式 */
+.theme-switch {
+    background: none;
+    border: none;
+    padding: 0.25rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-icon {
+    width: 20px;
+    height: 20px;
+    stroke: var(--text-color);
+}
+
+/* 在亮色主题下只显示月亮图标，在暗色主题下只显示太阳图标 */
+:root[data-theme="light"] .theme-icon-dark,
+:root[data-theme="dark"] .theme-icon-light {
+    display: none;
+}

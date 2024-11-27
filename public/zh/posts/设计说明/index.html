@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="zh" data-theme="light">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=53716&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>设计说明 - 医学影像标准</title>
+    <meta name="description" content="医学影像检查项目名称及编码标准官方网站">
+    
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    
+    <link rel="stylesheet" href="/css/theme.css">
+    <link rel="stylesheet" href="/css/main.css">
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/custom.css">
+    
+    
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    
+    
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+    <nav class="site-nav">
+    <div class="container">
+        <div class="nav-left">
+            <a href="/zh/" class="site-title">
+                医学影像标准
+            </a>
+        </div>
+        <div class="nav-right">
+            
+
+            <div class="theme-switch-wrapper">
+                <button id="theme-switch" class="theme-switch" aria-label="切换主题">
+                    <svg class="theme-icon theme-icon-light" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="theme-icon theme-icon-dark" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="main-menu">
+                
+                
+                <a class="menu-item" href="/" title="">
+                    首页
+                </a>
+                
+                <a class="menu-item" href="/standards/" title="">
+                    标准介绍
+                </a>
+                
+                <a class="menu-item" href="/dashboard/" title="">
+                    数据看板
+                </a>
+                
+                <a class="menu-item" href="/search/" title="">
+                    标准查询
+                </a>
+                
+                <a class="menu-item" href="/news/" title="">
+                    新闻和博客
+                </a>
+                
+                <a class="menu-item" href="/ai-playground/" title="">
+                    AI大模型
+                </a>
+                
+                <a class="menu-item" href="/about/" title="">
+                    关于我们
+                </a>
+                
+                <a class="menu-item" href="/zh/news/2024/11/%E5%8C%BB%E5%AD%A6%E5%BD%B1%E5%83%8F%E6%A3%80%E6%9F%A5%E9%A1%B9%E7%9B%AE%E6%A0%87%E5%87%86%E5%8C%96%E8%AE%BA%E8%BF%B0/" title="医学影像检查项目标准化论述">
+                    医学影像检查项目标准化论述
+                </a>
+                
+                <a class="menu-item" href="/zh/news/" title="新闻动态">
+                    新闻动态
+                </a>
+                
+                <a class="menu-item" href="/zh/blog/" title="技术博客">
+                    技术博客
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <div class="theme-switch-wrapper">
+        <button id="theme-switch" class="theme-switch" aria-label="切换主题">
+            <span class="theme-switch-icon"></span>
+        </button>
+    </div>
+    <main class="main-content pb7" role="main">
+        
+<article class="page-content">
+    
+    <header class="page-header">
+        <h1>设计说明</h1>
+        
+    </header>
+
+    
+    <div class="page-body">
+        <h3 id="一网站结构">一、网站结构</h3>
+<ol>
+<li>
+<p><strong>首页</strong></p>
+<ul>
+<li>标准的简介和重要公告</li>
+<li>最新新闻和博客摘要</li>
+<li>数据看板概览</li>
+<li>快速链接到主要功能</li>
+</ul>
+</li>
+<li>
+<p><strong>标准介绍</strong></p>
+<ul>
+<li>标准的背景和目的</li>
+<li>制定过程和参与机构</li>
+<li>标准的核心内容</li>
+<li>标准的下载和文档</li>
+</ul>
+</li>
+<li>
+<p><strong>数据看板</strong></p>
+<ul>
+<li>标准实施情况统计</li>
+<li>数据可视化图表</li>
+<li>关键指标的实时更新</li>
+<li>数据分析报告</li>
+</ul>
+</li>
+<li>
+<p><strong>标准查询</strong></p>
+<ul>
+<li>按编码查询项目</li>
+<li>按名称查询编码</li>
+<li>高级搜索（多条件组合查询）</li>
+<li>查询结果的导出和打印</li>
+</ul>
+</li>
+<li>
+<p><strong>新闻和博客</strong></p>
+<ul>
+<li>最新行业新闻</li>
+<li>专家博客和评论</li>
+<li>相关新闻的分类浏览</li>
+<li>订阅和分享功能</li>
+</ul>
+</li>
+<li>
+<p><strong>AI大模型 Playground</strong></p>
+<ul>
+<li>基于标准的AI模型互动体验</li>
+<li>用户输入医学影像项目，获得编码建议</li>
+<li>模型训练和更新日志</li>
+<li>开发者API接口说明</li>
+</ul>
+</li>
+<li>
+<p><strong>关于我们</strong></p>
+<ul>
+<li>机构介绍</li>
+<li>联系方式</li>
+<li>常见问题解答</li>
+<li>法律声明和隐私政策</li>
+</ul>
+</li>
+<li>
+<p><strong>用户中心</strong>（如果需要用户登录）</p>
+<ul>
+<li>个人信息管理</li>
+<li>收藏和历史记录</li>
+<li>设置和偏好</li>
+</ul>
+</li>
+</ol>
+<h3 id="二页面定义与功能">二、页面定义与功能</h3>
+<p><strong>1. 首页</strong></p>
+<ul>
+<li><strong>Banner轮播</strong>：展示重要公告、最新活动和标准更新信息。</li>
+<li><strong>快速导航</strong>：直达标准查询、数据看板、AI大模型等主要功能的入口。</li>
+<li><strong>新闻摘要</strong>：显示最新的新闻和博客文章标题及摘要。</li>
+<li><strong>数据概览</strong>：以图表方式展示关键数据指标的概况。</li>
+</ul>
+<p><strong>2. 标准介绍</strong></p>
+<ul>
+<li><strong>文本内容</strong>：详细介绍标准的背景、意义和内容。</li>
+<li><strong>下载中心</strong>：提供标准全文、相关指南和手册的下载。</li>
+<li><strong>参与机构</strong>：展示参与标准制定的机构和专家名单。</li>
+</ul>
+<p><strong>3. 数据看板</strong></p>
+<ul>
+<li><strong>统计图表</strong>：采用柱状图、饼图、折线图等方式展示数据。</li>
+<li><strong>数据筛选</strong>：按时间、地区、机构等维度筛选数据。</li>
+<li><strong>报告生成</strong>：用户可生成自定义的数据分析报告。</li>
+</ul>
+<p><strong>4. 标准查询</strong></p>
+<ul>
+<li><strong>搜索框</strong>：支持按编码或项目名称搜索。</li>
+<li><strong>高级搜索</strong>：多条件组合查询，支持模糊搜索。</li>
+<li><strong>查询结果</strong>：以列表或表格形式展示，支持排序和分页。</li>
+<li><strong>导出功能</strong>：支持将查询结果导出为Excel、PDF等格式。</li>
+</ul>
+<p><strong>5. 新闻和博客</strong></p>
+<ul>
+<li><strong>文章列表</strong>：按发布时间、热门程度等排序。</li>
+<li><strong>分类浏览</strong>：按新闻、博客、专家观点等分类。</li>
+<li><strong>文章内容页</strong>：支持评论、点赞和分享。</li>
+</ul>
+<p><strong>6. AI大模型 Playground</strong></p>
+<ul>
+<li><strong>交互界面</strong>：用户输入项目描述，模型返回编码建议。</li>
+<li><strong>示例指导</strong>：提供示例输入和使用说明。</li>
+<li><strong>反馈机制</strong>：用户可对模型输出进行反馈，帮助优化。</li>
+</ul>
+<p><strong>7. 关于我们</strong></p>
+<ul>
+<li><strong>机构信息</strong>：介绍官网所属机构的使命和团队。</li>
+<li><strong>联系方式</strong>：提供邮箱、电话、地址等联系信息。</li>
+<li><strong>FAQ</strong>：汇总常见问题，方便用户查阅。</li>
+<li><strong>法律信息</strong>：展示用户协议、隐私政策等法律文件。</li>
+</ul>
+<p><strong>8. 用户中心</strong></p>
+<ul>
+<li><strong>登录/注册</strong>：支持邮箱、手机号等多种方式注册登录。</li>
+<li><strong>个人资料</strong>：用户可查看和编辑个人信息。</li>
+<li><strong>收藏夹</strong>：用户可收藏重要的标准项目或文章。</li>
+<li><strong>历史记录</strong>：记录用户的查询和浏览历史。</li>
+</ul>
+<h3 id="三样式和色彩">三、样式和色彩</h3>
+<ul>
+<li>
+<p><strong>整体风格</strong>：简洁、专业、科技感强。布局清晰，易于导航。</p>
+</li>
+<li>
+<p><strong>色彩搭配</strong>：</p>
+<ul>
+<li><strong>主色调</strong>：蓝色系，体现科技和医疗的专业性。</li>
+<li><strong>辅色调</strong>：白色和灰色，增强内容的可读性。</li>
+<li><strong>点缀色</strong>：使用橙色或绿色作为强调色，用于按钮、链接等交互元素。</li>
+</ul>
+</li>
+<li>
+<p><strong>字体</strong>：采用清晰易读的无衬线字体，如微软雅黑或苹方。</p>
+</li>
+<li>
+<p><strong>图标和元素</strong>：使用与医学影像相关的图标，如MRI、X射线等符号。</p>
+</li>
+<li>
+<p><strong>响应式设计</strong>：适配不同的设备和屏幕尺寸，确保移动端的良好体验。</p>
+</li>
+</ul>
+<h3 id="四符合行业标准的设计">四、符合行业标准的设计</h3>
+<ul>
+<li><strong>可访问性</strong>：遵循Web可访问性标准，确保残障人士也能方便使用。</li>
+<li><strong>兼容性</strong>：兼容主流浏览器，保证功能的稳定性。</li>
+<li><strong>安全性</strong>：采用HTTPS协议，保护用户数据安全。</li>
+<li><strong>内容合规</strong>：遵守医学和网络信息发布的相关法律法规。</li>
+</ul>
+<h3 id="五其他建议">五、其他建议</h3>
+<ul>
+<li><strong>多语言支持</strong>：考虑到国际用户，提供中英文等多语言切换。</li>
+<li><strong>搜索引擎优化（SEO）</strong>：优化网站结构和内容，提高在搜索引擎的可见性。</li>
+<li><strong>数据隐私</strong>：明确用户数据的收集和使用方式，遵守GDPR等数据保护条例（如适用）。</li>
+<li><strong>定期更新</strong>：保持内容的新鲜度，定期发布最新的标准更新和行业动态。</li>
+</ul>
+<h1 id="页面设计方案">页面设计方案：</h1>
+<h3 id="一首页"><strong>一、首页</strong></h3>
+<p><strong>1. Banner轮播</strong></p>
+<ul>
+<li><strong>图片1</strong>：展示《医学影像检查项目名称及编码标准》正式发布的封面图。
+<ul>
+<li><strong>文字</strong>：热烈庆祝《医学影像检查项目名称及编码标准》正式发布！</li>
+</ul>
+</li>
+<li><strong>图片2</strong>：一脉阳光医学影像医院集团的企业形象图。
+<ul>
+<li><strong>文字</strong>：引领医学影像行业标准化发展。</li>
+</ul>
+</li>
+<li><strong>图片3</strong>：AI大模型Playground的演示截图。
+<ul>
+<li><strong>文字</strong>：体验基于标准的AI智能编码推荐。</li>
+</ul>
+</li>
+</ul>
+<p><strong>2. 快速导航</strong></p>
+<ul>
+<li><strong>标准介绍</strong></li>
+<li><strong>数据看板</strong></li>
+<li><strong>标准查询</strong></li>
+<li><strong>AI大模型</strong></li>
+<li><strong>新闻博客</strong></li>
+</ul>
+<p><strong>3. 新闻摘要</strong></p>
+<ul>
+<li><strong>新闻标题</strong>：一脉阳光成功举办医学影像标准化研讨会
+<ul>
+<li><strong>日期</strong>：2023年10月15日</li>
+<li><strong>摘要</strong>：来自全国各地的医学影像专家齐聚一堂，共同探讨行业标准化的重要性。</li>
+</ul>
+</li>
+<li><strong>新闻标题</strong>：AI助力医学影像编码，提升行业效率
+<ul>
+<li><strong>日期</strong>：2023年9月30日</li>
+<li><strong>摘要</strong>：我集团推出的AI大模型为医学影像编码带来全新解决方案。</li>
+</ul>
+</li>
+</ul>
+<p><strong>4. 数据概览</strong></p>
+<ul>
+<li><strong>实施医院数量</strong>：150+</li>
+<li><strong>编码项目总数</strong>：2000+</li>
+<li><strong>参与专家人数</strong>：300+</li>
+<li><strong>标准更新次数</strong>：5次</li>
+</ul>
+<hr>
+<h3 id="二标准介绍"><strong>二、标准介绍</strong></h3>
+<p><strong>1. 标准的背景和目的</strong></p>
+<p>《医学影像检查项目名称及编码标准》旨在规范全国医学影像检查项目的名称和编码，促进医疗机构之间的数据共享和交流，提升诊疗效率，保障患者权益。</p>
+<p><strong>2. 制定过程和参与机构</strong></p>
+<p>该标准由一脉阳光医学影像医院集团牵头，联合国内多家知名医疗机构和专家共同制定，历时两年，经过多轮讨论和修订。</p>
+<p><strong>3. 标准的核心内容</strong></p>
+<ul>
+<li><strong>项目名称规范</strong>：统一医学影像检查项目的命名规则。</li>
+<li><strong>编码规则</strong>：为每个检查项目制定唯一编码，便于信息系统的对接和管理。</li>
+<li><strong>适用范围</strong>：涵盖X射线、CT、MRI、超声等各类医学影像检查项目。</li>
+</ul>
+<p><strong>4. 标准的下载和文档</strong></p>
+<ul>
+<li><strong>标准全文下载</strong>（PDF）</li>
+<li><strong>实施指南</strong>（PDF）</li>
+<li><strong>常见问题解答</strong>（PDF）</li>
+</ul>
+<hr>
+<h3 id="三数据看板"><strong>三、数据看板</strong></h3>
+<p><strong>1. 标准实施情况统计</strong></p>
+<ul>
+<li><strong>全国实施覆盖率</strong>：60%</li>
+<li><strong>各省市实施情况</strong>（柱状图展示）
+<ul>
+<li>北京：80%</li>
+<li>上海：75%</li>
+<li>广东：70%</li>
+<li>其他地区：50%</li>
+</ul>
+</li>
+</ul>
+<p><strong>2. 数据可视化图表</strong></p>
+<ul>
+<li><strong>项目使用频率排行</strong>（饼图）
+<ul>
+<li>CT检查：40%</li>
+<li>MRI检查：30%</li>
+<li>X射线检查：20%</li>
+<li>超声检查：10%</li>
+</ul>
+</li>
+</ul>
+<p><strong>3. 关键指标的实时更新</strong></p>
+<ul>
+<li><strong>每日新增编码项目数</strong></li>
+<li><strong>用户访问量统计</strong></li>
+<li><strong>反馈问题处理率</strong></li>
+</ul>
+<p><strong>4. 数据分析报告</strong></p>
+<p>用户可点击下载最新的《标准实施情况年度报告》。</p>
+<hr>
+<h3 id="四标准查询"><strong>四、标准查询</strong></h3>
+<p><strong>1. 搜索功能</strong></p>
+<ul>
+<li><strong>按编码查询</strong>：输入编码，例如“MI001”，点击搜索。</li>
+<li><strong>按名称查询</strong>：输入项目名称关键词，例如“脑部MRI”，点击搜索。</li>
+</ul>
+<p><strong>2. 高级搜索</strong></p>
+<ul>
+<li><strong>条件筛选</strong>：
+<ul>
+<li>检查类别：CT、MRI、X射线、超声</li>
+<li>部位：头部、胸部、腹部、四肢</li>
+<li>年份：2022、2023</li>
+</ul>
+</li>
+</ul>
+<p><strong>3. 查询结果展示</strong></p>
+<ul>
+<li><strong>列表形式</strong>：
+<ul>
+<li><strong>编码</strong>：MI001</li>
+<li><strong>项目名称</strong>：头部MRI平扫</li>
+<li><strong>适用范围</strong>：脑部肿瘤、脑血管疾病</li>
+<li><strong>说明</strong>：用于脑部结构的高分辨率成像</li>
+</ul>
+</li>
+</ul>
+<p><strong>4. 导出和打印</strong></p>
+<ul>
+<li>用户可将查询结果导出为Excel或PDF格式，支持打印功能。</li>
+</ul>
+<hr>
+<h3 id="五新闻和博客"><strong>五、新闻和博客</strong></h3>
+<p><strong>1. 新闻列表</strong></p>
+<ul>
+<li><strong>新闻标题</strong>：标准化助力医疗数据互联互通
+<ul>
+<li><strong>日期</strong>：2023年8月20日</li>
+<li><strong>摘要</strong>：探讨医学影像标准化对医疗信息化发展的影响。</li>
+</ul>
+</li>
+</ul>
+<p><strong>2. 博客文章</strong></p>
+<ul>
+<li><strong>标题</strong>：医学影像检查编码的国际对比
+<ul>
+<li><strong>作者</strong>：张教授</li>
+<li><strong>日期</strong>：2023年7月15日</li>
+<li><strong>内容摘要</strong>：分析国内外医学影像检查编码标准的异同。</li>
+</ul>
+</li>
+</ul>
+<p><strong>3. 订阅和分享</strong></p>
+<ul>
+<li>用户可订阅最新新闻和博客，支持分享到微信、微博等社交平台。</li>
+</ul>
+<hr>
+<h3 id="六ai大模型-playground"><strong>六、AI大模型 Playground</strong></h3>
+<p><strong>1. 交互界面</strong></p>
+<ul>
+<li><strong>输入框</strong>：请描述您的医学影像检查需求。
+<ul>
+<li>例如：“患者头部受伤，需要检查是否有颅内出血。”</li>
+</ul>
+</li>
+<li><strong>输出结果</strong>：
+<ul>
+<li><strong>推荐编码</strong>：MI001</li>
+<li><strong>推荐项目名称</strong>：头部CT平扫</li>
+<li><strong>说明</strong>：适用于颅内出血的快速筛查。</li>
+</ul>
+</li>
+</ul>
+<p><strong>2. 示例指导</strong></p>
+<ul>
+<li>提供常见场景的输入示例，帮助用户正确使用。</li>
+</ul>
+<p><strong>3. 反馈机制</strong></p>
+<ul>
+<li><strong>满意度评价</strong>：五星评分</li>
+<li><strong>意见反馈</strong>：用户可填写反馈意见，帮助模型优化。</li>
+</ul>
+<hr>
+<h3 id="七关于我们"><strong>七、关于我们</strong></h3>
+<p><strong>1. 机构介绍</strong></p>
+<p>一脉阳光医学影像医院集团是国内领先的医学影像服务提供商，致力于推动医学影像行业的标准化和信息化发展。</p>
+<p><strong>2. 联系方式</strong></p>
+<ul>
+<li><strong>地址</strong>：北京市朝阳区阳光路100号</li>
+<li><strong>电话</strong>：010-12345678</li>
+<li><strong>邮箱</strong>：contact@ymyg.com</li>
+</ul>
+<p><strong>3. 常见问题解答</strong></p>
+<ul>
+<li><strong>问</strong>：如何获取标准的详细内容？
+<ul>
+<li><strong>答</strong>：您可在标准介绍页面下载标准全文。</li>
+</ul>
+</li>
+</ul>
+<p><strong>4. 法律声明和隐私政策</strong></p>
+<ul>
+<li>详细说明用户使用网站的相关法律条款和隐私保护措施。</li>
+</ul>
+<hr>
+<h3 id="八用户中心"><strong>八、用户中心</strong></h3>
+<p><strong>1. 登录/注册</strong></p>
+<ul>
+<li><strong>注册</strong>：填写邮箱、手机号、设置密码。</li>
+<li><strong>登录</strong>：输入邮箱/手机号和密码。</li>
+</ul>
+<p><strong>2. 个人资料</strong></p>
+<ul>
+<li><strong>基本信息</strong>：姓名、单位、职称</li>
+<li><strong>联系方式</strong>：邮箱、电话</li>
+</ul>
+<p><strong>3. 收藏和历史记录</strong></p>
+<ul>
+<li><strong>我的收藏</strong>：用户收藏的标准项目、文章列表。</li>
+<li><strong>浏览历史</strong>：查看最近访问的页面和查询记录。</li>
+</ul>
+<p><strong>4. 设置和偏好</strong></p>
+<ul>
+<li><strong>通知设置</strong>：是否接收最新资讯推送。</li>
+<li><strong>语言选择</strong>：简体中文、English</li>
+</ul>
+<hr>
+<h3 id="九样式和色彩"><strong>九、样式和色彩</strong></h3>
+<p><strong>1. 整体风格</strong></p>
+<ul>
+<li><strong>专业简洁</strong>：采用扁平化设计，突出重点信息。</li>
+<li><strong>科技感</strong>：使用医学影像元素的背景图，增加科技氛围。</li>
+</ul>
+<p><strong>2. 色彩搭配</strong></p>
+<ul>
+<li><strong>主色调</strong>：深蓝色（#003366），体现专业和信任。</li>
+<li><strong>辅色调</strong>：白色（#FFFFFF）和浅灰色（#F5F5F5），增强阅读体验。</li>
+<li><strong>点缀色</strong>：橙色（#FF6600），用于按钮和重要提示。</li>
+</ul>
+<p><strong>3. 字体</strong></p>
+<ul>
+<li><strong>标题字体</strong>：微软雅黑，字号适中，加粗显示。</li>
+<li><strong>正文字体</strong>：宋体，字号为14px，行距1.5倍。</li>
+</ul>
+<p><strong>4. 图标和元素</strong></p>
+<ul>
+<li>使用医学影像相关的矢量图标，如X射线、CT机等。</li>
+</ul>
+<p><strong>5. 响应式设计</strong></p>
+<ul>
+<li>确保在PC、平板、手机端都有良好的展示效果。</li>
+</ul>
+<hr>
+<h3 id="十符合行业标准的设计"><strong>十、符合行业标准的设计</strong></h3>
+<p><strong>1. 可访问性</strong></p>
+<ul>
+<li><strong>文本替代</strong>：为图片和图标添加alt属性。</li>
+<li><strong>键盘导航</strong>：支持键盘操作，方便特殊用户群体。</li>
+</ul>
+<p><strong>2. 兼容性</strong></p>
+<ul>
+<li><strong>浏览器支持</strong>：兼容Chrome、Firefox、Safari、Edge等主流浏览器。</li>
+<li><strong>性能优化</strong>：提升页面加载速度，优化用户体验。</li>
+</ul>
+<p><strong>3. 安全性</strong></p>
+<ul>
+<li><strong>HTTPS加密</strong>：确保数据传输的安全性。</li>
+<li><strong>隐私保护</strong>：严格保护用户的个人信息，不泄露给第三方。</li>
+</ul>
+<p><strong>4. 内容合规</strong></p>
+<ul>
+<li>所有内容均遵守国家相关法律法规，杜绝违规信息。</li>
+</ul>
+<hr>
+<h3 id="十一其他建议"><strong>十一、其他建议</strong></h3>
+<p><strong>1. 多语言支持</strong></p>
+<ul>
+<li>在页面顶部提供语言切换按钮，支持中文和英文版本。</li>
+</ul>
+<p><strong>2. 搜索引擎优化（SEO）</strong></p>
+<ul>
+<li><strong>关键词优化</strong>：在标题和内容中合理使用关键词。</li>
+<li><strong>元标签</strong>：为每个页面添加合适的meta描述和关键词。</li>
+</ul>
+<p><strong>3. 数据隐私</strong></p>
+<ul>
+<li><strong>用户协议</strong>：明确说明用户数据的使用范围和保护措施。</li>
+<li><strong>隐私政策</strong>：遵守相关的数据保护条例，尊重用户隐私。</li>
+</ul>
+<p><strong>4. 定期更新</strong></p>
+<ul>
+<li><strong>内容维护</strong>：安排专人负责网站内容的更新和审核。</li>
+<li><strong>用户互动</strong>：定期举办线上活动，增加用户粘性。</li>
+</ul>
+<p>数据看板：</p>
+<p>医学影像标准：
+模态：9个
+部位层级：3级
+部位数量：
+检查项目数量：
+标准版本更新：5次</p>
+<p>汇总数据：2000万+
+涉及各级医疗机构：600家+
+实施医院数量：30+</p>
+<p>项目数， 模态数量、部位层级、部位数量（1、2、3级），版本数量，个性化项目数
+相关指标： 参考 数据量 2000万，数据来源医院 500+，参考文献：200份等
+标准落地机构：30家+，二级。。、三级。。、
+医保项目适配：江西、黑龙江、河南、湖北
+你编排下，看看还有什么</p>
+<h2 id="标准介绍">标准介绍：</h2>
+<pre><code>一脉阳光集团从2020年开始历经3年时间经过不断迭代打磨，在2024年正式推出《医学影像检查项目名称及编码标准》V3.8.2. 该版本覆盖了CT、MR、DR、MG、US、PET-CT、PET-MR、SPECT常规检查项目。
+检查项目名称，在医疗机构内是临床科医生和影像科的操作技师、诊断医生最重要的沟通语言，同时也是链接。   沟通的医学影像检查特色和临床建立了三级部位医学影像检查项目名称和编码标准是一个科学的、专业的、结构化的、可计算的、医学影像检查分类系统，是一个标准化的体系框架，适用于医疗机构工作中开单、登记、缴费、操作、报告，是影像数据互联互通互认的重要工具，是医疗机构实现精细化管理的基础，是大数据、人工智能、大模型工作工作的基石。
+</code></pre>
+<p>《医学影像检查项目名称及编码标准体系》集合一脉阳光专业团队和合作专家的共同努力，经过从2020年开始，对大量数据和文献、资料，进行分析总结，经过多轮修订，在2023年通过了人卫研究院组织的行业专家评审，发布了正式版本。本标准是医疗大数据平台和数据互联互通互认的基础，目前在各地卫健委和医疗机构支持下全面推广。</p>
+<p>标准的作用：
+《医学影像检查项目名称及编码标准》旨在规范医学影像检查项目的名称和编码，帮助医疗机构内部不同科室统一沟通语言，实现精细化管理和运行。帮助机构之间的数据共享和交流，提升诊疗效率，保障患者权益。</p>
+<p>rimag是一家提供中国第一家提供专业医学影像检查服务的第三方医疗机构，有丰富的专家和运营经验，基于旗下100多家医疗机构的数据管理，集团建立了自定义的数据规范和数据标准，基于标准的数据治理和数据分析，使得数据对集团的运营管理提供直接的价值。</p>
+
+    </div>
+
+    
+    <footer class="page-footer">
+        
+        
+        <div class="meta">
+            <time datetime="2024-11-25T11:55:06&#43;08:00">
+                2024年11月25日
+            </time>
+            
+        </div>
+    </footer>
+</article>
+
+<style>
+.page-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.page-header {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.page-header h1 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.page-header .description {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+}
+
+.page-body {
+    line-height: 1.8;
+    margin-bottom: 3rem;
+}
+
+.page-body h2 {
+    color: var(--primary-color);
+    margin: 2rem 0 1rem;
+}
+
+.page-body p {
+    margin-bottom: 1rem;
+}
+
+.page-body ul, .page-body ol {
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+}
+
+.page-footer {
+    border-top: 1px solid #eee;
+    padding-top: 2rem;
+    margin-top: 3rem;
+}
+
+.tags {
+    margin-bottom: 1rem;
+}
+
+.tag {
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 2rem;
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.meta {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+.meta > * {
+    margin-right: 1rem;
+}
+
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .page-header .description {
+        font-size: 1rem;
+    }
+}
+</style>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://localhost:53716/zh/" >
+    &copy;  医学影像标准 2024 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+    
+
+    
+    <script src="/js/main.js"></script>
+    
+    
+    <script src="/js/theme-switch.js"></script>
+    
+    
+    <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+
+<style>
+ 
+:root {
+    --primary-color: #0056b3;
+    --secondary-color: #6c757d;
+    --background-color: #f8f9fa;
+    --text-color: #333;
+    --header-height: 70px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    min-height: calc(100vh - var(--header-height));
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ 
+@media (max-width: 768px) {
+    :root {
+        --header-height: 100px;
+    }
+    
+    .main-content {
+        padding-top: calc(var(--header-height) + 1rem);
+    }
+}
+</style>

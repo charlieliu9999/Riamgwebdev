@@ -1,0 +1,36 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+
+# 配置媒体文件路径
+media_folder: "static/images"    # 实际存储位置
+public_folder: "/images"         # 公开访问路径
+
+collections:
+  - name: "standards"
+    label: "标准文档"
+    folder: "content/standards"
+    create: true
+    fields:
+      - {label: "标题", name: "title", widget: "string"}
+      - {label: "描述", name: "description", widget: "text"}
+      - {label: "权重", name: "weight", widget: "number", default: 1}
+      - {label: "封面图片", name: "featured_image", widget: "image", required: false}
+      - {label: "正文内容", name: "body", widget: "markdown"}
+
+  - name: "news"
+    label: "新闻"
+    folder: "content/news"
+    create: true
+    path: "{{year}}/{{month}}/{{slug}}/index"
+    fields:
+      - {label: "标题", name: "title", widget: "string"}
+      - {label: "发布日期", name: "date", widget: "datetime"}
+      - {label: "作者", name: "author", widget: "string"}
+      - {label: "分类", name: "categories", widget: "list"}
+      - {label: "标签", name: "tags", widget: "list"}
+      - {label: "特色图片", name: "featured_image", widget: "image", required: false}
+      - {label: "摘要", name: "summary", widget: "text"}
+      - {label: "正文内容", name: "body", widget: "markdown"}

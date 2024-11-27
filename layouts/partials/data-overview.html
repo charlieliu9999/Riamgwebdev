@@ -1,0 +1,50 @@
+<div class="data-overview">
+    <div class="card">
+        <h3>实施概况</h3>
+        <div class="stats-grid">
+            <div class="stat-item">
+                <span class="stat-value">100+</span>
+                <span class="stat-label">医院</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">95%</span>
+                <span class="stat-label">覆盖率</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">10万+</span>
+                <span class="stat-label">编码量</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.data-overview {
+    margin: 2rem 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 1rem;
+}
+
+.stat-value {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.stat-label {
+    display: block;
+    color: var(--secondary-color);
+    margin-top: 0.5rem;
+}
+</style>

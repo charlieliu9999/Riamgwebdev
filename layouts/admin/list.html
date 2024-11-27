@@ -1,0 +1,122 @@
+{{ define "main" }}
+<div class="admin-container">
+    <h1>新闻管理</h1>
+    
+    <!-- 创建新文章表单 -->
+    <div class="create-article">
+        <h2>创建新文章</h2>
+        <form id="createArticleForm">
+            <div class="form-group">
+                <label for="title">标题：</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="author">作者：</label>
+                <input type="text" id="author" name="author">
+            </div>
+            
+            <div class="form-group">
+                <label for="categories">分类：</label>
+                <input type="text" id="categories" name="categories" placeholder="用逗号分隔">
+            </div>
+            
+            <div class="form-group">
+                <label for="tags">标签：</label>
+                <input type="text" id="tags" name="tags" placeholder="用逗号分隔">
+            </div>
+            
+            <div class="form-group">
+                <label for="content">内容：</label>
+                <textarea id="content" name="content" rows="10"></textarea>
+            </div>
+            
+            <button type="submit">创建文章</button>
+        </form>
+    </div>
+    
+    <!-- 文章列表 -->
+    <div class="article-list">
+        <h2>现有文章</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>标题</th>
+                    <th>作者</th>
+                    <th>发布日期</th>
+                    <th>状态</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{ range .Pages }}
+                <tr>
+                    <td>{{ .Title }}</td>
+                    <td>{{ .Params.author }}</td>
+                    <td>{{ .Date.Format "2006-01-02" }}</td>
+                    <td>{{ if .Draft }}草稿{{ else }}已发布{{ end }}</td>
+                    <td>
+                        <a href="{{ .RelPermalink }}" target="_blank">查看</a>
+                        <a href="#" class="edit-article" data-id="{{ .File.UniqueID }}">编辑</a>
+                    </td>
+                </tr>
+                {{ end }}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<style>
+.admin-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background: #228be6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1c7ed6;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background: #f8f9fa;
+}
+</style>
+{{ end }}

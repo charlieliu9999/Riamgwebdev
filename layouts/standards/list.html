@@ -1,0 +1,60 @@
+{{ define "main" }}
+<link rel="stylesheet" href="/css/standards.css">
+<div class="standards-container">
+    <!-- 侧边导航栏 -->
+    <nav class="standards-sidebar">
+        <div class="nav-title">标准文档目录</div>
+        <ul>
+            {{ with .Site.GetPage "/standards" }}
+                {{ range .Pages.ByWeight }}
+                <li>
+                    <a href="{{ .RelPermalink }}" {{ if eq . $ }}class="active"{{ end }}>
+                        {{ .Title }}
+                    </a>
+                </li>
+                {{ end }}
+            {{ end }}
+        </ul>
+    </nav>
+
+    <!-- 主要内容区域 -->
+    <main class="standards-content">
+        <article>
+            <h1>{{ .Title }}</h1>
+            
+            <!-- 文档元信息 -->
+            <div class="doc-meta">
+                <span>最后更新: {{ .Lastmod.Format "2006-01-02" }}</span>
+                {{ with .Description }}
+                <span> | {{ . }}</span>
+                {{ end }}
+            </div>
+
+            <!-- 文档内容 -->
+            {{ .Content }}
+
+            <!-- 子页面内容 -->
+            {{ range .Pages.ByWeight }}
+            <section class="sub-content">
+                <h2 id="{{ .File.TranslationBaseName }}">{{ .Title }}</h2>
+                {{ .Content }}
+            </section>
+            {{ end }}
+        </article>
+    </main>
+</div>
+
+<!-- 返回顶部按钮的JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // 高亮当前页面在导航中的位置
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.standards-sidebar a');
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
+        }
+    });
+});
+</script>
+{{ end }}

@@ -1,0 +1,65 @@
+<div class="project-types">
+    <canvas id="projectTypesChart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const ctx = document.getElementById('projectTypesChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ['CT检查', 'MRI检查', 'X射线检查', '超声检查', '其他检查'],
+            datasets: [{
+                data: [35, 25, 20, 15, 5],
+                backgroundColor: [
+                    '#4e73df',
+                    '#1cc88a',
+                    '#36b9cc',
+                    '#f6c23e',
+                    '#858796'
+                ]
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'right',
+                    labels: {
+                        font: {
+                            size: 14
+                        }
+                    }
+                },
+                title: {
+                    display: true,
+                    text: '检查项目类型分布',
+                    font: {
+                        size: 16
+                    }
+                }
+            },
+            cutout: '60%'
+        }
+    });
+});
+</script>
+
+<style>
+.project-types {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 2rem 0;
+    height: 400px;
+}
+
+@media (max-width: 768px) {
+    .project-types {
+        height: 300px;
+    }
+}
+</style>
