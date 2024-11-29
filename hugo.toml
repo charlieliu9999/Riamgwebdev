@@ -1,0 +1,68 @@
+baseURL = 'http://localhost:1313/'
+defaultContentLanguage = 'zh'
+defaultContentLanguageInSubdir = true
+theme = 'ananke'
+
+[languages]
+  [languages.zh]
+    title = "影像标准网站"
+    weight = 1
+    contentDir = "content/zh"
+    languageName = "中文"
+    [languages.zh.params]
+      description = "欢迎来到影像标准网站"
+      author = "Charlie"
+    [[languages.zh.menu.main]]
+      name = "首页"
+      url = "/zh/"
+      weight = 1
+    [[languages.zh.menu.main]]
+      name = "文章"
+      url = "/zh/posts/"
+      weight = 2
+    [[languages.zh.menu.main]]
+      name = "关于"
+      url = "/zh/about/"
+      weight = 3
+      
+  [languages.en]
+    title = "Imaging Standard Website"
+    weight = 2
+    contentDir = "content/en"
+    languageName = "English"
+    [languages.en.params]
+      description = "Welcome to Imaging Standard Website"
+      author = "Charlie"
+    [[languages.en.menu.main]]
+      name = "Home"
+      url = "/en/"
+      weight = 1
+    [[languages.en.menu.main]]
+      name = "Posts"
+      url = "/en/posts/"
+      weight = 2
+    [[languages.en.menu.main]]
+      name = "About"
+      url = "/en/about/"
+      weight = 3
+
+[params]
+  text_color = ""
+  author = "Charlie"
+  favicon = ""
+  site_logo = ""
+  description = "The last theme you'll ever need. Maybe."
+  background_color_class = "bg-black"
+  recent_posts_number = 3
+  featured_image = "images/about-featured.jpg"
+  custom_css = ["css/custom-layout.css"]
+  custom_js = ["js/theme.js"]
+  
+  # 社交媒体链接
+  [[params.ananke_socials]]
+  name = "twitter"
+  url = "https://twitter.com/youraccount"
+  
+  [[params.ananke_socials]]
+  name = "github"
+  url = "https://github.com/youraccount"

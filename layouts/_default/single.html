@@ -1,0 +1,94 @@
+{{ define "main" }}
+<article class="main-content">
+    <!-- 左侧导航栏 -->
+    <aside class="sidebar">
+        <nav class="sidebar-nav">
+            <ul>
+                {{ $headers := findRE "<h[2-3].*?>(.|\n)*?</h[2-3]>" .Content }}
+                {{ range $headers }}
+                    {{ $header := . }}
+                    {{ $level := index (findRE "[2-3]" . 1) 0 }}
+                    {{ $title := index (findRE ">(.|\n)*?<" . 1) 0 }}
+                    {{ $title = strings.TrimPrefix ">" $title }}
+                    {{ $title = strings.TrimSuffix "<" $title }}
+                    {{ $anchor := $title | anchorize }}
+                    <li class="nav-item-level-{{ $level }}">
+                        <a href="#{{ $anchor }}" class="nav-link" data-target="{{ $anchor }}">{{ $title }}</a>
+                    </li>
+                {{ end }}
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- 主要内容区域 -->
+    <div class="content-container">
+        <header>
+            <h1>{{ .Title }}</h1>
+            {{ with .Params.description }}
+                <p class="description">{{ . }}</p>
+            {{ end }}
+        </header>
+        
+        <div class="content">
+            {{ $content := .Content }}
+            {{ $content := replaceRE "<h([2-3])>([^<]*)</h[2-3]>" "<h${1} id=\"${2}\" class=\"heading\">${2}</h${1}>" $content }}
+            {{ $content | safeHTML }}
+        </div>
+    </div>
+
+    {{ partial "recommended-articles.html" . }}
+</article>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.nav-link');
+    const headerOffset = 100; // 设置一个固定的偏移量
+
+    // 滚动处理
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('data-target');
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // 添加滚动监听以高亮当前章节
+    const observerOptions = {
+        root: null,
+        rootMargin: '-100px 0px -50% 0px',
+        threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.id;
+                // 移除所有导航项的活动状态
+                navLinks.forEach(link => link.classList.remove('active'));
+                // 添加当前章节的活动状态
+                const activeLink = document.querySelector(`.nav-link[data-target="${id}"]`);
+                if (activeLink) {
+                    activeLink.classList.add('active');
+                }
+            }
+        });
+    }, observerOptions);
+
+    // 观察所有标题元素
+    document.querySelectorAll('.heading').forEach(heading => {
+        observer.observe(heading);
+    });
+});
+</script>
+{{ end }}

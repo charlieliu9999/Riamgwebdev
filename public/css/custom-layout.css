@@ -1,0 +1,259 @@
+/* 调整页面宽度和布局 */
+.main-content {
+    display: flex;
+    gap: 2rem;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* 左侧导航栏样式 */
+.sidebar {
+    width: 250px;
+    position: sticky;
+    top: 2rem;
+    height: fit-content;
+    overflow-y: auto;
+}
+
+.sidebar-nav {
+    border-right: 1px solid var(--border-color, #eee);
+    padding-right: 1rem;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item-level-2 {
+    margin-bottom: 0.5rem;
+}
+
+.nav-item-level-3 {
+    margin-bottom: 0.5rem;
+    margin-left: 1rem;
+}
+
+.nav-link {
+    color: var(--text-color, #333);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    display: block;
+    padding: 0.3rem 0.5rem;
+    border-left: 3px solid transparent;
+}
+
+.nav-link:hover {
+    color: var(--link-hover-color, #0066cc);
+    background-color: var(--hover-bg-color, rgba(0, 102, 204, 0.1));
+}
+
+.nav-link.active {
+    color: var(--link-hover-color, #0066cc);
+    border-left-color: var(--link-hover-color, #0066cc);
+    background-color: var(--active-bg-color, rgba(0, 102, 204, 0.15));
+    font-weight: 500;
+}
+
+/* 主要内容区域样式 */
+.content-container {
+    flex: 1;
+    min-width: 0;
+    max-width: 900px;
+}
+
+/* 标题样式 */
+.heading {
+    padding-top: 100px;  /* 与 JavaScript 中的 headerOffset 相匹配 */
+    margin-top: -100px;  /* 抵消 padding-top */
+}
+
+/* 表格样式 */
+.content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    background-color: var(--table-bg-color, #fff);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.content th {
+    background-color: var(--table-header-bg, #f5f5f5);
+    color: var(--table-header-color, #333);
+    font-weight: 600;
+    text-align: left;
+    padding: 1rem;
+    border-bottom: 2px solid var(--border-color, #eee);
+}
+
+.content td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color, #eee);
+    color: var(--text-color, #333);
+}
+
+.content tr:last-child td {
+    border-bottom: none;
+}
+
+.content tr:hover {
+    background-color: var(--table-hover-bg, rgba(0, 0, 0, 0.02));
+}
+
+/* 右侧推荐文章样式 */
+.recommended {
+    width: 300px;
+    position: sticky;
+    top: 2rem;
+    height: fit-content;
+    padding-left: 2rem;
+    border-left: 1px solid var(--border-color);
+}
+
+.recommended-container {
+    background-color: var(--background-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.recommended-title {
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+
+.recommended-item {
+    border-bottom: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.recommended-item:hover {
+    background-color: var(--hover-bg-color);
+    transform: translateX(5px);
+}
+
+.recommended-image {
+    width: 100%;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px;
+    margin-bottom: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.recommended-item:hover .recommended-image {
+    transform: scale(1.05);
+}
+
+.recommended-article-title {
+    font-size: 1rem;
+    margin: 0 0 0.5rem 0;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.recommended-item:hover .recommended-article-title {
+    color: var(--link-hover-color);
+}
+
+.recommended-description {
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+.recommended-date {
+    font-size: 0.8rem;
+    color: var(--text-color);
+    opacity: 0.6;
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: static;
+        margin-bottom: 2rem;
+    }
+
+    .content table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+@media (max-width: 1200px) {
+    .recommended {
+        display: none;
+    }
+}
+
+/* 暗色主题适配 */
+:root {
+    --text-color: #333;
+    --border-color: #eee;
+    --link-hover-color: #0066cc;
+    --background-color: #fff;
+    --hover-bg-color: rgba(0, 102, 204, 0.1);
+    --active-bg-color: rgba(0, 102, 204, 0.15);
+    --table-bg-color: #fff;
+    --table-header-bg: #f5f5f5;
+    --table-header-color: #333;
+    --table-hover-bg: rgba(0, 0, 0, 0.02);
+}
+
+[data-theme="dark"] {
+    --text-color: #eee;
+    --border-color: #444;
+    --link-hover-color: #66b3ff;
+    --background-color: #1a1a1a;
+    --hover-bg-color: rgba(102, 179, 255, 0.1);
+    --active-bg-color: rgba(102, 179, 255, 0.15);
+    --table-bg-color: #1e1e1e;
+    --table-header-bg: #2d2d2d;
+    --table-header-color: #fff;
+    --table-hover-bg: rgba(255, 255, 255, 0.05);
+}
+
+/* 平滑滚动 */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px; /* 与 JavaScript 中的 headerOffset 相匹配 */
+}
+
+/* 调整字体大小 */
+body {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+p, li {
+    font-size: 0.9rem;
+}

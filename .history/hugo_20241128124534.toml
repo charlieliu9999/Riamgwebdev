@@ -1,0 +1,30 @@
+baseURL = 'http://localhost:1313/'
+languageCode = 'zh-cn'
+title = 'Imaging Standard Website'
+theme = 'ananke'
+
+[params]
+  author = "Charlie"
+  site_logo = ""
+  description = "Welcome to Imaging Standard Website"
+  background_color_class = "bg-black"
+  recent_posts_number = 5
+  
+  # 社交媒体链接
+  [[params.ananke_socials]]
+  name = "twitter"
+  url = "https://twitter.com/youraccount"
+  
+  [[params.ananke_socials]]
+  name = "github"
+  url = "https://github.com/youraccount"
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 2

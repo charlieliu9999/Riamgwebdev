@@ -1,0 +1,25 @@
+<!-- 右侧推荐文章 -->
+<aside class="recommended">
+    <div class="recommended-container">
+        <h3 class="recommended-title">推荐文章</h3>
+        {{ $currentPage := . }}
+        {{ $pages := where .Site.RegularPages "Section" .Section }}
+        {{ $relatedPages := where (where $pages "Permalink" "!=" .Permalink) "Language.Lang" .Language.Lang }}
+        {{ range first 5 $relatedPages }}
+        <div class="recommended-item">
+            <a href="{{ .Permalink }}" class="recommended-link">
+                {{ if .Params.featured_image }}
+                <div class="recommended-image" style="background-image: url('{{ .Params.featured_image }}')"></div>
+                {{ end }}
+                <div class="recommended-content">
+                    <h4 class="recommended-article-title">{{ .Title }}</h4>
+                    {{ with .Description }}
+                    <p class="recommended-description">{{ . | truncate 60 }}</p>
+                    {{ end }}
+                    <span class="recommended-date">{{ .Date.Format "2006-01-02" }}</span>
+                </div>
+            </a>
+        </div>
+        {{ end }}
+    </div>
+</aside>

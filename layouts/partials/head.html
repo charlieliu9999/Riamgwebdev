@@ -1,0 +1,31 @@
+<!-- 添加自定义 CSS -->
+<link rel="stylesheet" href="{{ "css/custom.css" | absURL }}">
+
+<!-- 主题初始化脚本 - 放在头部以避免闪烁 -->
+<script>
+  // 立即执行主题初始化
+  (function() {
+    const savedTheme = localStorage.getItem('theme');
+    document.documentElement.setAttribute('data-theme', savedTheme || 'light');
+  })();
+</script>
+
+<!-- 主题切换脚本 - 在 DOMContentLoaded 后执行 -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.querySelector('.theme-switch input[type="checkbox"]');
+    if (!themeToggle) return;
+
+    // 根据当前主题设置开关状态
+    if (document.documentElement.getAttribute('data-theme') === 'dark') {
+      themeToggle.checked = true;
+    }
+
+    // 监听开关变化
+    themeToggle.addEventListener('change', () => {
+      const newTheme = themeToggle.checked ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+  });
+</script>
