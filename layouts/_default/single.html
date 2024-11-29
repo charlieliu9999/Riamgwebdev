@@ -22,11 +22,33 @@
 
     <!-- 主要内容区域 -->
     <div class="content-container">
+        {{ if .Params.featured_image }}
+            <div class="featured-image-container">
+                <img src="{{ .Params.featured_image }}" alt="{{ .Title }}" class="featured-image">
+            </div>
+        {{ end }}
+
         <header>
             <h1>{{ .Title }}</h1>
             {{ with .Params.description }}
                 <p class="description">{{ . }}</p>
             {{ end }}
+            <div class="article-metadata">
+                {{ if .Date }}
+                    <div class="article-date">
+                        <svg class="w1 h1 mr2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                        </svg>
+                        {{ .Date.Format "2006年01月02日" }}
+                    </div>
+                {{ end }}
+                <div class="reading-time">
+                    <svg class="w1 h1 mr2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                    </svg>
+                    {{ .ReadingTime }} 分钟阅读
+                </div>
+            </div>
         </header>
         
         <div class="content">

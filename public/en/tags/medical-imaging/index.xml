@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Medical Imaging on Imaging Standard Website</title>
+    <link>http://localhost:1313/en/tags/medical-imaging/</link>
+    <description>Recent content in Medical Imaging on Imaging Standard Website</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 11 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/en/tags/medical-imaging/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Comprehensive Overview of Medical Imaging Standards</title>
+      <link>http://localhost:1313/en/posts/foreign-situation/</link>
+      <pubDate>Mon, 11 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en/posts/foreign-situation/</guid>
+      <description>&lt;h1 id=&#34;comprehensive-overview-of-medical-imaging-check-item-naming-and-coding-standards&#34;&gt;Comprehensive Overview of Medical Imaging Check Item Naming and Coding Standards&lt;/h1&gt;&#xA;&lt;p&gt;Medical imaging plays a crucial role in modern healthcare, providing essential visual representations of the interior of the body for clinical analysis and medical intervention. The naming and coding standards associated with medical imaging check items are fundamental to ensuring consistency, accuracy, and interoperability across healthcare systems. This comprehensive overview will explore the various aspects of these standards, their implementation, and their significance in healthcare settings.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

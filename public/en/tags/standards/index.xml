@@ -2,17 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Standards on Imaging Standard Website</title>
-    <link>http://localhost:58004/en/tags/standards/</link>
+    <link>http://localhost:1313/en/tags/standards/</link>
     <description>Recent content in Standards on Imaging Standard Website</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 01 Dec 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:58004/en/tags/standards/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/en/tags/standards/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Comprehensive Overview of Medical Imaging Standards</title>
+      <link>http://localhost:1313/en/posts/foreign-situation/</link>
+      <pubDate>Mon, 11 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en/posts/foreign-situation/</guid>
+      <description>&lt;h1 id=&#34;comprehensive-overview-of-medical-imaging-check-item-naming-and-coding-standards&#34;&gt;Comprehensive Overview of Medical Imaging Check Item Naming and Coding Standards&lt;/h1&gt;&#xA;&lt;p&gt;Medical imaging plays a crucial role in modern healthcare, providing essential visual representations of the interior of the body for clinical analysis and medical intervention. The naming and coding standards associated with medical imaging check items are fundamental to ensuring consistency, accuracy, and interoperability across healthcare systems. This comprehensive overview will explore the various aspects of these standards, their implementation, and their significance in healthcare settings.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Introduction to Imaging Standards</title>
-      <link>http://localhost:58004/en/posts/imaging-standards/</link>
+      <link>http://localhost:1313/en/posts/imaging-standards/</link>
       <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:58004/en/posts/imaging-standards/</guid>
+      <guid>http://localhost:1313/en/posts/imaging-standards/</guid>
       <description>&lt;h1 id=&#34;welcome-to-imaging-standards-website&#34;&gt;Welcome to Imaging Standards Website&lt;/h1&gt;&#xA;&lt;p&gt;This is our first article. Here, we will dive deep into the world of imaging standards and understand how they shape modern image processing technology.&lt;/p&gt;&#xA;&lt;h2 id=&#34;main-content&#34;&gt;Main Content&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Importance of Imaging Standards&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Ensuring image quality consistency&lt;/li&gt;&#xA;&lt;li&gt;Improving compatibility between different systems&lt;/li&gt;&#xA;&lt;li&gt;Optimizing workflow efficiency&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Common Imaging Standards&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;DICOM Medical Imaging Standard&lt;/li&gt;&#xA;&lt;li&gt;JPEG/JPEG2000 Compression Standards&lt;/li&gt;&#xA;&lt;li&gt;ICC Color Management Standard&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;How to Apply These Standards&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Practical application cases&lt;/li&gt;&#xA;&lt;li&gt;Best practice guidelines&lt;/li&gt;&#xA;&lt;li&gt;Common problem solutions&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;future-plans&#34;&gt;Future Plans&lt;/h2&gt;&#xA;&lt;p&gt;We will continue to update the following content:&lt;/p&gt;</description>
     </item>
   </channel>

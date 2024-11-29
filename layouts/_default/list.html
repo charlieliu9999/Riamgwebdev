@@ -1,23 +1,51 @@
+{{ define "header" }}
+  {{ partial "list-header.html" . }}
+{{ end }}
+
 {{ define "main" }}
-  <article class="pa3 pa4-ns nested-copy-line-height">
-    <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy {{ $.Param "text_color" | default "mid-gray" }}">
-      {{ .Content }}
-    </section>
-    <section class="flex-ns flex-wrap justify-around mt5">
+  <article class="pa3 pa4-ns">
+    <section class="flex-ns flex-wrap justify-start">
       {{ range .Paginator.Pages }}
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          {{/* 文章卡片 */}}
-          <div class="bg-white mb3 pa4 gray overflow-hidden">
-            {{ if .Date }}
-              <div class="f6">{{ .Date.Format "2006年01月02日" }}</div>
+        <div class="relative w-100 w-25-l mb3 pr3">
+          <div class="article-card h-100">
+            {{ if .Params.featured_image }}
+              <div class="article-image-container">
+                <img src="{{ .Params.featured_image }}" alt="{{ .Title }}" class="article-image">
+              </div>
             {{ end }}
-            <h1 class="f3 near-black">
-              <a href="{{ .RelPermalink }}" class="link black dim">
-                {{ .Title }}
-              </a>
-            </h1>
-            <div class="nested-links f5 lh-copy nested-copy-line-height">
-              {{ .Description }}
+            <div class="article-content">
+              <h2 class="article-title mb2">
+                <a href="{{ .RelPermalink }}" class="link">
+                  {{ .Title }}
+                </a>
+              </h2>
+              
+              <div class="article-metadata f7 mb2">
+                {{ if .Date }}
+                  <span class="article-date mr3">
+                    <i class="fas fa-calendar-alt mr1"></i>
+                    {{ .Date.Format "2006-01-02" }}
+                  </span>
+                {{ end }}
+                <span class="reading-time">
+                  <i class="fas fa-clock mr1"></i>
+                  {{ .ReadingTime }} 分钟阅读
+                </span>
+              </div>
+              
+              <div class="article-description f6 mb2">
+                {{ .Description }}
+              </div>
+              
+              {{ with .Params.tags }}
+                <div class="article-tags f7">
+                  {{ range . }}
+                    <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="article-tag">
+                      #{{ . }}
+                    </a>
+                  {{ end }}
+                </div>
+              {{ end }}
             </div>
           </div>
         </div>
