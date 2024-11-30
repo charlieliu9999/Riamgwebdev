@@ -1,0 +1,79 @@
+backend:
+  name: test-repo
+  local_backend: true
+
+# 设置媒体文件存储位置
+media_folder: "static/images/"
+public_folder: "/images/"
+
+# 本地化设置
+locale: 'zh_CN'
+
+# 编辑器设置
+editor:
+  preview: true
+
+# 发布模式
+publish_mode: editorial_workflow
+
+# 集合定义
+collections:
+  # 中文文章
+  - name: "posts_zh"
+    label: "文章 (中文)"
+    folder: "content/zh/posts"
+    create: true
+    extension: "md"
+    format: "frontmatter"
+    identifier_field: "title"
+    filter: {field: "_template", value: "post"}
+    fields:
+      - {label: "标题", name: "title", widget: "string"}
+      - {label: "发布日期", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false}
+      - {label: "特色图片", name: "featured_image", widget: "image", required: false, allow_multiple: false}
+      - {label: "描述", name: "description", widget: "text"}
+      - {label: "分类", name: "categories", widget: "list", required: false}
+      - {label: "标签", name: "tags", widget: "list", required: false}
+      - {label: "草稿", name: "draft", widget: "boolean", default: false}
+      - {label: "正文", name: "body", widget: "markdown"}
+
+  # 英文文章
+  - name: "posts_en"
+    label: "Posts (English)"
+    folder: "content/en/posts"
+    create: true
+    extension: "md"
+    format: "frontmatter"
+    identifier_field: "title"
+    filter: {field: "_template", value: "post"}
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false}
+      - {label: "Featured Image", name: "featured_image", widget: "image", required: false, allow_multiple: false}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Categories", name: "categories", widget: "list", required: false}
+      - {label: "Tags", name: "tags", widget: "list", required: false}
+      - {label: "Draft", name: "draft", widget: "boolean", default: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  # 中文关于页面
+  - name: "about_zh"
+    label: "关于 (中文)"
+    files:
+      - name: "about"
+        label: "关于页面"
+        file: "content/zh/about.md"
+        fields:
+          - {label: "标题", name: "title", widget: "string"}
+          - {label: "正文", name: "body", widget: "markdown"}
+
+  # 英文关于页面
+  - name: "about_en"
+    label: "About (English)"
+    files:
+      - name: "about"
+        label: "About Page"
+        file: "content/en/about.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}

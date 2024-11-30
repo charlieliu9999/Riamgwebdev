@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>医学影像标准网站 - 内容管理系统</title>
+    <!-- Static CMS 样式 -->
+    <link href="/node_modules/@staticcms/core/dist/main.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Static CMS 脚本 -->
+    <script src="/node_modules/@staticcms/core/dist/static-cms-core.js"></script>
+    <script>
+        window.CMS_MANUAL_INIT = true;
+
+        const config = {
+            backend: {
+                name: 'local',
+                url: 'http://localhost:8081/api'
+            },
+            local_backend: {
+                url: 'http://localhost:8081/api',
+                allowed_hosts: ['localhost']
+            },
+            media_folder: 'static/images',
+            public_folder: '/images',
+            locale: 'zh_CN',
+            publish_mode: 'editorial_workflow',
+            collections: [
+                {
+                    name: 'posts_zh',
+                    label: '文章 (中文)',
+                    folder: 'content/zh/posts',
+                    create: true,
+                    slug: '{{slug}}',
+                    preview_path: 'zh/posts/{{slug}}',
+                    fields: [
+                        {label: '标题', name: 'title', widget: 'string'},
+                        {label: '日期', name: 'date', widget: 'datetime'},
+                        {label: '描述', name: 'description', widget: 'text'},
+                        {label: '特色图片', name: 'featured_image', widget: 'string', required: false},
+                        {label: '标签', name: 'tags', widget: 'list', required: false},
+                        {label: '分类', name: 'categories', widget: 'list', required: false},
+                        {label: '草稿', name: 'draft', widget: 'boolean', default: false},
+                        {label: '正文', name: 'body', widget: 'markdown'}
+                    ]
+                }
+            ]
+        };
+
+        window.CMS.init({ config });
+    </script>
+</body>
+</html> 

@@ -1,33 +1,43 @@
 backend:
-  name: git-gateway
-  branch: main
+  name: git
+  branch: feature/add-netlify-cms
 
-media_folder: "static/images/uploads"
-public_folder: "/images/uploads"
+media_folder: "static/images"
+public_folder: "/images"
+
+locale: 'zh_Hans'
 
 collections:
   - name: "posts"
-    label: "Posts"
+    label: "文章"
     folder: "content/zh/posts"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: "md"
+    format: "frontmatter"
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "featured_image", widget: "image", required: false}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Tags", name: "tags", widget: "list"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "标题", name: "title", widget: "string"}
+      - {label: "发布日期", name: "date", widget: "datetime"}
+      - {label: "特色图片", name: "featured_image", widget: "image", required: false}
+      - {label: "描述", name: "description", widget: "text"}
+      - {label: "分类", name: "categories", widget: "list", required: false}
+      - {label: "标签", name: "tags", widget: "list", required: false}
+      - {label: "内容", name: "body", widget: "markdown"}
 
-  - name: "posts_en"
-    label: "Posts (English)"
-    folder: "content/en/posts"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "featured_image", widget: "image", required: false}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Tags", name: "tags", widget: "list"}
-      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "pages"
+    label: "页面"
+    files:
+      - file: "content/zh/_index.md"
+        label: "首页"
+        name: "home"
+        fields:
+          - {label: "标题", name: "title", widget: "string"}
+          - {label: "描述", name: "description", widget: "text"}
+          - {label: "内容", name: "body", widget: "markdown"}
+      
+      - file: "content/zh/about.md"
+        label: "关于"
+        name: "about"
+        fields:
+          - {label: "标题", name: "title", widget: "string"}
+          - {label: "描述", name: "description", widget: "text"}
+          - {label: "内容", name: "body", widget: "markdown"}

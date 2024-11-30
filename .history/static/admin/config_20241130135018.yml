@@ -1,0 +1,34 @@
+backend:
+  name: test-repo
+
+media_folder: "static/images"
+public_folder: "/images/"
+
+locale: 'zh_Hans'
+
+collections:
+  - name: "zh_posts"
+    label: "中文文章"
+    folder: "content/zh/posts"
+    create: true
+    fields:
+      - {label: "标题", name: "title", widget: "string"}
+      - {label: "发布日期", name: "date", widget: "datetime"}
+      - {label: "特色图片", name: "featured_image", widget: "image", required: false}
+      - {label: "描述", name: "description", widget: "text"}
+      - {label: "分类", name: "categories", widget: "list", required: false}
+      - {label: "标签", name: "tags", widget: "list", required: false}
+      - {label: "内容", name: "body", widget: "markdown"}
+
+  - name: "en_posts"
+    label: "English Posts"
+    folder: "content/en/posts"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "featured_image", widget: "image", required: false}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Categories", name: "categories", widget: "list", required: false}
+      - {label: "Tags", name: "tags", widget: "list", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
