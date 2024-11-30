@@ -1,6 +1,8 @@
 backend:
-  name: git
-  branch: feature/add-netlify-cms
+  name: proxy
+  proxy_url: http://localhost:8081/api/v1
+
+local_backend: true
 
 media_folder: "static/images"
 public_folder: "/images"

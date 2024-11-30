@@ -1,11 +1,15 @@
 ---
-title: "医学影像检查项目命名与编码标准的国际概况"
-date: 2024-01-11
+title: 国际标准相关研究
+date: 2024-07-02T16:00:00.000Z
 draft: false
-featured_image: "/images/medical-imaging.jpg"
-description: "深入了解国际医学影像检查项目命名和编码标准的现状与发展"
-tags: ["医学影像", "标准化", "国际现状"]
-categories: ["技术文档"]
+featured_image: /images/images.jpeg
+description: 深入了解国际医学影像检查项目命名和编码标准的现状与发展
+categories:
+  - 技术文档
+tags:
+  - 医学影像
+  - 标准化
+  - 国际现状
 ---
 
 # 医学影像检查项目命名与编码标准的国际概况

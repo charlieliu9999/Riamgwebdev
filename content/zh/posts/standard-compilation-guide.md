@@ -1,10 +1,14 @@
 ---
-title: "医学影像检查项目名称及编码标准编制说明"
+title: 编制说明
 date: 2023-11-29
-description: "一脉阳光影像医院集团企业标准《医学影像检查项目名称及编码标准》的编制说明文档"
-featured_image: "/images/image.png"
-tags: ["医学影像", "标准编制", "编码规范"]
-categories: ["标准化建设"]
+featured_image: /images/image.png
+description: 一脉阳光影像医院集团企业标准《医学影像检查项目名称及编码标准》的编制说明文档
+categories:
+  - 标准化建设
+tags:
+  - 医学影像
+  - 标准编制
+  - 编码规范
 ---
 
 

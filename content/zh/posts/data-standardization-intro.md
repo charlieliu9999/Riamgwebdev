@@ -1,10 +1,14 @@
 ---
-title: "一脉集团医学影像数据标准化建设：从混沌到秩序的革新"
+title: 从混沌到秩序的革新
 date: 2023-11-29
-description: "探讨一脉集团在医学影像数据标准化建设中的实践与创新"
-featured_image: "/images/image.png"
-tags: ["医学影像", "数据标准化", "AI引擎"]
-categories: ["标准化建设"]
+featured_image: /images/download.jpg
+description: 探讨一脉集团在医学影像数据标准化建设中的实践与创新
+categories:
+  - 标准化建设
+tags:
+  - 医学影像
+  - 数据标准化
+  - AI引擎
 ---
 
 # **一脉集团医学影像数据标准化建设：从混沌到秩序的革新**
