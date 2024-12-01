@@ -1,8 +1,8 @@
 ---
-title: 文章
-date: 2024-01-01
-featured_image: /images/featured.jpg
-description: 医学影像标准、人工智能、大模型及应用的相关文章、新闻、动态
+title: "新闻博客"
+description: "最新动态与技术博客"
 ---
 
-这里收集了所有与影像标准相关的文章、新闻和解读。
+# 新闻与博客
+
+这里您可以找到最新的行业动态、技术更新和专业见解。

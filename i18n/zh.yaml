@@ -1,0 +1,11 @@
+- id: standards_nav_title
+  translation: "标准文档导航"
+
+- id: prev_page
+  translation: "上一页"
+
+- id: next_page
+  translation: "下一页"
+
+- id: toc_title
+  translation: "目录" 

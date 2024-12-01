@@ -1,0 +1,11 @@
+- id: standards_nav_title
+  translation: "Standards Navigation"
+
+- id: prev_page
+  translation: "Previous"
+
+- id: next_page
+  translation: "Next"
+
+- id: toc_title
+  translation: "Table of Contents" 

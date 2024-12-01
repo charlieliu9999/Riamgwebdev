@@ -1,40 +1,24 @@
 ---
 title: "About Us"
-description: "Learn more about the Imaging Standards Website"
-featured_image: "images/about-featured.jpg"
-menu:
-  main:
-    weight: 3
+description: "Learn about our team and mission"
 ---
 
-# About Imaging Standards Website
+# About Us
 
-We are dedicated to providing the latest and most comprehensive information about imaging standards, helping professionals and enthusiasts better understand and apply various imaging standards.
+We are a professional team focused on medical imaging standardization, committed to advancing the standardization process in the medical imaging field.
 
-## Our Mission
+## Our Vision
 
-- **Knowledge Sharing**: Share the latest imaging standards knowledge and practical applications
-- **Industry Advancement**: Promote the application and development of imaging standards across various fields
-- **Technical Support**: Provide professional technical guidance and solutions for users
+To build a globally leading medical imaging standardization platform and promote the standardized development of the medical imaging industry.
 
-## Our Advantages
+## Core Values
 
-1. **Professionalism**
-   - In-depth technical research
-   - Rich practical experience
-   - Continuous industry tracking
-
-2. **Practicality**
-   - Case-driven learning approach
-   - Practice-oriented content design
-   - Problem-solving mindset
+- **Professionalism** - Providing professional standardization solutions
+- **Innovation** - Continuous innovation, driving industry development
+- **Collaboration** - Promoting industry communication and cooperation
 
 ## Contact Us
 
-If you have any questions or suggestions, please feel free to contact us through:
-
-- Email: contact@imagingstandards.com
-- Phone: +86-xxx-xxxx-xxxx
-- Address: xxx Street, xxx District, Beijing, China
-
-Thank you for your attention and support to the Imaging Standards Website!
+- Email: contact@example.com
+- Phone: +86 xxx xxxx xxxx
+- Address: XX City, XX Province, China

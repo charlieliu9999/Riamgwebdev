@@ -1,63 +1,110 @@
 backend:
   name: proxy
-  proxy_url: http://localhost:8081/api/v1
+  proxy_url: http://localhost:8081/api
 
 local_backend: true
 
 media_folder: "static/images"
 public_folder: "/images"
 
-locale: 'zh_Hans'
-
-editor:
-  preview: true
-  frame: true
+i18n:
+  structure: multiple_folders
+  locales: [zh, en]
+  default_locale: zh
 
 collections:
+  - name: "zh_pages"
+    label: "页面（中文）"
+    files:
+      - name: "home"
+        label: "首页"
+        file: "content/zh/_index.md"
+        fields:
+          - {label: "标题", name: "title", widget: "string"}
+          - {label: "描述", name: "description", widget: "text"}
+          - {label: "内容", name: "body", widget: "markdown"}
+      - name: "about"
+        label: "关于我们"
+        file: "content/zh/about.md"
+        fields:
+          - {label: "标题", name: "title", widget: "string"}
+          - {label: "描述", name: "description", widget: "text"}
+          - {label: "内容", name: "body", widget: "markdown"}
+
+  - name: "zh_standards"
+    label: "标准介绍（中文）"
+    folder: "content/zh/standards"
+    create: true
+    fields:
+      - {label: "标题", name: "title", widget: "string"}
+      - {label: "描述", name: "description", widget: "text"}
+      - {label: "排序", name: "weight", widget: "number", default: 100}
+      - {label: "内容", name: "body", widget: "markdown"}
+    sortable_fields: {
+      fields: ['weight', 'title']
+    }
+
   - name: "zh_posts"
-    label: "文章"
+    label: "新闻博客（中文）"
     folder: "content/zh/posts"
     create: true
-    extension: "md"
-    format: "frontmatter"
     fields:
       - {label: "标题", name: "title", widget: "string"}
       - {label: "发布日期", name: "date", widget: "datetime"}
       - {label: "特色图片", name: "featured_image", widget: "image", required: false}
       - {label: "描述", name: "description", widget: "text"}
-      - {label: "分类", name: "categories", widget: "list", required: false}
-      - {label: "标签", name: "tags", widget: "list", required: false}
+      - {label: "分类", name: "categories", widget: "list"}
+      - {label: "标签", name: "tags", widget: "list"}
       - {label: "内容", name: "body", widget: "markdown"}
+    sortable_fields: {
+      fields: ['date', 'title']
+    }
 
-  - name: "zh_standards"
-    label: "标准介绍"
-    folder: "content/zh/standards"
-    create: true
-    extension: "md"
-    format: "frontmatter"
-    fields:
-      - {label: "标题", name: "title", widget: "string"}
-      - {label: "排序", name: "weight", widget: "number", default: 100, value_type: "int"}
-      - {label: "描述", name: "description", widget: "text"}
-      - {label: "内容", name: "body", widget: "markdown"}
-
-  - name: "pages"
-    label: "页面"
+  - name: "en_pages"
+    label: "Pages (English)"
     files:
-      - file: "content/zh/_index.md"
-        label: "中文首页"
-        name: "zh_home"
+      - name: "home"
+        label: "Home"
+        file: "content/en/_index.md"
         fields:
-          - {label: "标题", name: "title", widget: "string"}
-          - {label: "描述", name: "description", widget: "text"}
-          - {label: "内容", name: "body", widget: "markdown"}
-      
-      - file: "content/zh/about.md"
-        label: "关于页面"
-        name: "zh_about"
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Content", name: "body", widget: "markdown"}
+      - name: "about"
+        label: "About Us"
+        file: "content/en/about.md"
         fields:
-          - {label: "标题", name: "title", widget: "string"}
-          - {label: "描述", name: "description", widget: "text"}
-          - {label: "内容", name: "body", widget: "markdown"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Content", name: "body", widget: "markdown"}
+
+  - name: "en_standards"
+    label: "Standards (English)"
+    folder: "content/en/standards"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Order", name: "weight", widget: "number", default: 100}
+      - {label: "Content", name: "body", widget: "markdown"}
+    sortable_fields: {
+      fields: ['weight', 'title']
+    }
+
+  - name: "en_posts"
+    label: "News & Blog (English)"
+    folder: "content/en/posts"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "featured_image", widget: "image", required: false}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Categories", name: "categories", widget: "list"}
+      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Content", name: "body", widget: "markdown"}
+    sortable_fields: {
+      fields: ['date', 'title']
+    }
 
 site_url: http://localhost:1313

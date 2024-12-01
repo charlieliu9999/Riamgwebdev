@@ -24,11 +24,13 @@
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
 
-  <body class="ma0 {{ $.Param "body_classes"  | default "avenir bg-near-white" }}">
-    {{ block "header" . }}{{ partial "site-header.html" .}}{{ end }}
-    <main class="pb7" role="main">
-      {{ block "main" . }}{{ end }}
-    </main>
-    {{ block "footer" . }}{{ partial "site-footer.html" . }}{{ end }}
+  <body>
+    <div class="site-container">
+      {{ block "header" . }}{{ partial "site-header.html" .}}{{ end }}
+      <main role="main">
+        {{ block "main" . }}{{ end }}
+      </main>
+      {{ block "footer" . }}{{ partial "site-footer.html" . }}{{ end }}
+    </div>
   </body>
 </html>

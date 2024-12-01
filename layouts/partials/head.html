@@ -29,3 +29,53 @@
     });
   });
 </script>
+
+<!-- 添加标准页面样式 -->
+<link rel="stylesheet" href="{{ "css/standards.css" | absURL }}">
+
+<!-- GitHub Markdown 样式 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@5.2.0/github-markdown.min.css">
+
+<!-- Markdown 内容样式 -->
+<style>
+.markdown-body {
+    box-sizing: border-box;
+    min-width: 200px;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 20px;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+    color: var(--heading-color);
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+
+.markdown-body p {
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+@media (max-width: 767px) {
+    .markdown-body {
+        padding: 15px;
+    }
+}
+</style>
+
+<!-- Favicon -->
+<link rel="icon" href="{{ "favicon.ico" | absURL }}">
+<link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | absURL }}">
+
+<!-- RSS -->
+{{ range .AlternativeOutputFormats -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
+{{ end -}}

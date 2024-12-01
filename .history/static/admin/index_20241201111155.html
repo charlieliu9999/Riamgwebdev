@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Content Manager</title>
+    <script src="https://unpkg.com/@staticcms/app@^3.4.5/dist/static-cms-app.js"></script>
+<   <style>
+        /* 编辑器布局样式 */
+        .CMS_Frame_SplitPane {
+            display: flex !important;
+            width: 100% !important;
+        }
+
+        .CMS_Frame_SplitPane_Pane {
+            flex: 1 !important;
+            width: 50% !important;
+            min-width: 50% !important;
+        }
+
+        /* Markdown 编辑器样式 */
+        .CMS_Editor {
+            width: 100% !important;
+            max-width: none !important;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', monospace !important;
+            font-size: 14px !important;
+            line-height: 1.6 !important;
+        }
+
+        /* 预览区域样式 */
+        .CMS_Preview {
+            padding: 20px;
+            background: #fff;
+        }
+
+        /* 确保内容不会溢出 */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://unpkg.com/@staticcms/app@^3.4.5/dist/static-cms-app.js"></script>
+    <script>
+        window.CMS.init();
+    </script>
+</body>
+</html>

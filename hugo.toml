@@ -17,13 +17,17 @@ theme = 'ananke'
       url = "/zh/"
       weight = 1
     [[languages.zh.menu.main]]
-      name = "文章"
-      url = "/zh/posts/"
+      name = "标准介绍"
+      url = "/zh/standards/"
       weight = 2
     [[languages.zh.menu.main]]
-      name = "关于"
-      url = "/zh/about/"
+      name = "新闻博客"
+      url = "/zh/posts/"
       weight = 3
+    [[languages.zh.menu.main]]
+      name = "关于我们"
+      url = "/zh/about/"
+      weight = 4
       
   [languages.en]
     title = "Imaging Standard Website"
@@ -38,13 +42,17 @@ theme = 'ananke'
       url = "/en/"
       weight = 1
     [[languages.en.menu.main]]
-      name = "Posts"
-      url = "/en/posts/"
+      name = "Standards"
+      url = "/en/standards/"
       weight = 2
     [[languages.en.menu.main]]
-      name = "About"
-      url = "/en/about/"
+      name = "News & Blog"
+      url = "/en/posts/"
       weight = 3
+    [[languages.en.menu.main]]
+      name = "About Us"
+      url = "/en/about/"
+      weight = 4
 
 [params]
   text_color = ""

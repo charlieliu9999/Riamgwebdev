@@ -1,0 +1,123 @@
+/* 标准介绍页面布局 */
+.standards-wrapper {
+    display: flex;
+    padding-left: 280px;  /* ✓ 正确，为左侧导航预留空间 */
+}
+
+/* 左侧导航栏 */
+.standards-sidebar {
+    position: sticky;
+    top: 60px;
+    width: 280px;
+    background: var(--nav-bg, #2d3748);  /* 主题背景颜色 */
+    color: var(--nav-text, #fff);         /* 主题文本颜色 */
+    padding: 20px 0;                       /* 上下内边距 */
+    height: calc(100vh - 60px);
+    left: 0;                               /* 向左对齐 */
+    overflow-y: auto;
+    margin: 0;                             /* 移除外边距，确保不留空 */
+}
+
+.standards-sidebar h3 {
+    padding: 0 20px;                       /* 左右内边距 */
+    margin-bottom: 20px;                   /* 下外边距 */
+    font-size: 18px;                       /* 字体大小 */
+    font-weight: normal;                   /* 字体粗细 */
+    color: var(--nav-text, #fff);          /* 主题文本颜色 */
+}
+
+.standards-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.standards-nav li {
+    margin: 0;
+}
+
+.standards-nav a {
+    display: block;
+    padding: 12px 20px;
+    color: var(--nav-text-secondary, #cbd5e0);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.standards-nav a:hover {
+    background: var(--nav-hover-bg, #4a5568);
+    color: var(--nav-text, #fff);
+    border-left-color: var(--primary, #4299e1);
+}
+
+.standards-nav a.active {
+    background: var(--nav-hover-bg, #4a5568);
+    color: var(--nav-text, #fff);
+    border-left-color: var(--primary, #4299e1);
+}
+
+/* 右侧内容区 */
+.standards-content {
+    flex: 1;
+    width: 100%;  /* ✓ 正确，确保内容区域占满空间 */
+    padding: 40px 40px 40px 80px;  /* ✓ 正确，左侧有足够间距 */
+    background: var(--bg-color, #fff);
+    min-height: calc(100vh - 60px);
+}
+
+/* 内容容器基础样式 */
+#content-container {
+    max-width: 900px;
+    margin: 0;
+    line-height: 1.8;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .standards-wrapper {
+        padding-left: 0; /* 移动端不需要预留空间 */
+    }
+
+    .standards-sidebar {
+        position: fixed;
+        left: -280px;
+        transition: left 0.3s ease;
+        z-index: 1000;
+    }
+
+    .standards-sidebar.active {
+        left: 0;
+    }
+
+    .standards-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+}
+
+/* 菜单按钮 */
+.menu-toggle {
+    display: none;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 8px 15px;
+}
+
+/* 标准内容样式 */
+.standards-content h1, h2, h3 {
+    /* ✓ 正确的标题层级和样式 */
+}
+
+.standards-content ul, li, p {
+    /* ✓ 正确的内容样式 */
+}
+
+.standards-content h1 {
+    color: var(--heading-color, #2d3748);
+    border-bottom: 2px solid var(--primary, #4299e1);  /* ✓ 正确 */
+}
